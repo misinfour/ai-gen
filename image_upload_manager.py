@@ -59,7 +59,7 @@ class ImageUploadManager:
         
         return target_path
     
-    def upload_images_to_repo(self, image_files, repo_id, article_info):
+    def upload_images_to_repo(self, image_files, repo_id, article_info, is_final_commit=False):
         """将图片上传到指定的图床仓库"""
         try:
             image_repo_config = self.get_image_repo_config(repo_id)
@@ -150,8 +150,14 @@ class ImageUploadManager:
                         'message': '没有变更需要提交'
                     }
                 
-                # 提交并推送
-                commit_message = f"🤖 上传图片 {len(uploaded_images)} 张"
+                # 根据是否为最后一次提交生成不同的提交信息
+                if is_final_commit:
+                    commit_message = f"🤖 上传图片 {len(uploaded_images)} 张"
+                    print(f"    🚀 图片上传完成，开启自动部署")
+                else:
+                    commit_message = f"🤖 上传图片 {len(uploaded_images)} 张 [skip ci]"
+                    print(f"    📝 图片上传完成，跳过自动部署")
+                
                 subprocess.run([
                     'git', 'commit', '-m', commit_message
                 ], cwd=repo_path, check=True)
@@ -219,7 +225,7 @@ class ImageUploadManager:
         print(f"[REPLACE] 已替换 {replaced_count} 个图片路径为远程URL")
         return result_text
     
-    def process_article_images(self, article_path, repo_id, article_info):
+    def process_article_images(self, article_path, repo_id, article_info, is_final_commit=False):
         """处理文章中的所有图片，上传到图床并更新文章内容"""
         try:
             article_path = Path(article_path)
@@ -249,7 +255,7 @@ class ImageUploadManager:
             print(f"📸 找到 {len(image_files)} 张图片，开始上传到图床仓库...")
             
             # 上传图片到图床仓库
-            upload_result = self.upload_images_to_repo(image_files, repo_id, article_info)
+            upload_result = self.upload_images_to_repo(image_files, repo_id, article_info, is_final_commit)
             
             if not upload_result['success']:
                 return {

@@ -200,7 +200,7 @@ class RepositoryManager:
                         # 处理图片上传到图床
                         print(f"      📸 处理文章图片: {article_data['folder_name']}")
                         image_result = self.image_upload_manager.process_article_images(
-                            article_path, repo_id, article_data
+                            article_path, repo_id, article_data, is_final_commit
                         )
                         
                         if image_result['success'] and image_result.get('uploaded_images'):
@@ -231,7 +231,7 @@ class RepositoryManager:
                     # 处理图片上传到图床
                     print(f"    📸 处理文章图片: {article_info['folder_name']}")
                     image_result = self.image_upload_manager.process_article_images(
-                        source_path, repo_id, article_info
+                        source_path, repo_id, article_info, is_final_commit
                     )
                     
                     if image_result['success'] and image_result.get('uploaded_images'):
