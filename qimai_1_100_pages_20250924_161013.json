@@ -1,0 +1,2505 @@
+{
+  "metadata": {
+    "total_pages": 100,
+    "scrape_time": "2025-09-24T16:10:13.082840",
+    "keyword": "",
+    "date": "",
+    "country": "tw",
+    "genre": "7014",
+    "success_count": 1,
+    "failed_count": 0,
+    "failed_pages": [],
+    "empty_count": 0,
+    "empty_pages": []
+  },
+  "pages": {
+    "page_1": {
+      "code": 10000,
+      "msg": "成功",
+      "wordRankList": [
+        {
+          "word_id": "62746",
+          "word": "神魔之塔",
+          "hints": "6733",
+          "search_no": "159",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "583798880",
+              "app_name": "神魔之塔",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/f5/6d/06/f56d0652-1e46-30ab-ded5-170b35cfc4e6/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "785466672",
+              "app_name": "神魔助手(攻略、圖鑑、徵戰友) for 神魔之塔",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple114/v4/bb/1b/24/bb1b24d5-982b-6616-c535-b8bedac43025/AppIcon-1x_U007emarketing-4-85-220.jpeg/180x180bb.png"
+            },
+            {
+              "app_id": "6739527710",
+              "app_name": "神契：氣靈師",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/3b/44/04/3b4404df-0bdb-b05e-8cac-bb91cf03c06d/AppIcon-0-0-1x_U007epad-0-1-85-220.png/180x180bb.png"
+            }
+          ],
+          "rank": 1
+        },
+        {
+          "word_id": "27937669",
+          "word": "Gacha Life",
+          "hints": "5362",
+          "search_no": "209",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "6468838207",
+              "app_name": "Gacha Life 2",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/0d/16/3b/0d163ba7-0d49-0252-dc4c-cb2fc8d8993a/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1440430680",
+              "app_name": "Gacha Life",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple123/v4/63/83/d1/6383d1bb-7e46-81f2-3cd5-1812e42309d7/AppIcon-1x_U007emarketing-0-0-GLES2_U002c0-512MB-sRGB-0-0-0-85-220-0-0-0-3.png/100x100bb.jpg"
+            },
+            {
+              "app_id": "1527025761",
+              "app_name": "Gacha Club",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/c8/21/c7/c821c778-36fb-e662-071e-a867ce7fc501/AppIcon-1x_U007emarketing-0-7-0-85-220.png/100x100bb.jpg"
+            }
+          ],
+          "rank": 2
+        },
+        {
+          "word_id": "31451413",
+          "word": "盛唐妖夢",
+          "hints": "5308",
+          "search_no": "25",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1079395220",
+              "app_name": "Sdorica 萬象物語",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/93/58/7f/93587fdc-e307-cbf2-5660-a91516af0362/AppIcon-1x_U007emarketing-0-7-0-85-220-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "1598905834",
+              "app_name": "水果愛消消2：夢想莊園 - Fruit Diary 2",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/18/b0/a1/18b0a1f4-6e98-582c-adfa-e70d0c6aef62/AppIcon-1x_U007emarketing-0-10-0-85-220-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "1046770387",
+              "app_name": "伊甸之魂《Soul of Eden》",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/35/1d/3e/351d3e33-eb78-8052-f0eb-e0d7ef38c792/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/100x100bb.jpg"
+            }
+          ],
+          "rank": 3
+        },
+        {
+          "word_id": "27952884",
+          "word": "明日之後",
+          "hints": "5295",
+          "search_no": "117",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1442505782",
+              "app_name": "明日之後-末日生存手遊",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/a3/6d/f1/a36df15d-93ca-c580-57a0-7740c3940c04/AppIcon-1x_U007emarketing-0-10-0-85-220-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "1538722240",
+              "app_name": "Garena 黎明覺醒",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/25/c4/0d/25c40d2e-232a-f616-4ce5-cffa33dc24af/AppIcon-1x_U007emarketing-0-7-0-85-220-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "1241932094",
+              "app_name": "Last Day on Earth: Survival",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/9d/fe/42/9dfe422c-8d38-ba31-6fe2-d9edee598c38/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            }
+          ],
+          "rank": 4
+        },
+        {
+          "word_id": "5473026",
+          "word": "明日方舟",
+          "hints": "5292",
+          "search_no": "117",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1490985322",
+              "app_name": "明日方舟",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/41/8e/a5/418ea593-40da-86d8-2589-12e6e80234bd/AppIcon-0-0-1x_U007emarketing-0-0-0-9-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "1632810611",
+              "app_name": "罗德岛助理",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/b7/00/58/b70058d5-2e17-c652-e84f-7ce46aafedbe/AppIcon-0-0-1x_U007emarketing-0-6-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1516214913",
+              "app_name": "RO仙境傳說：新世代的誕生",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/27/3a/df/273adf90-6e30-b8e3-4dfa-e12c252eead4/AppIcon-1x_U007emarketing-0-7-0-85-220-0.png/180x180bb.png"
+            }
+          ],
+          "rank": 5
+        },
+        {
+          "word_id": "32551735",
+          "word": "雲上城之歌",
+          "hints": "5266",
+          "search_no": "46",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "6747065546",
+              "app_name": "雲上城之歌：勇者再出發",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/4a/18/b5/4a18b5a3-4864-d0e0-9beb-84811a225524/AppIcon-0-0-1x_U007emarketing-0-0-0-10-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "6746142055",
+              "app_name": "血影雙生",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/22/77/50/2277507a-b010-9082-b7ca-af4b89a92b61/AppIcon-1x_U007epad-0-1-85-220-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "6445938067",
+              "app_name": "空之島：失落王國",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple112/v4/5b/37/8e/5b378ee0-335a-7933-c52c-da0f4489fdcb/KZD-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/180x180bb.png"
+            }
+          ],
+          "rank": 6
+        },
+        {
+          "word_id": "32236374",
+          "word": "神魔三國志",
+          "hints": "5140",
+          "search_no": "106",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1528875374",
+              "app_name": "神魔三國志",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple113/v4/10/74/07/107407d7-1691-644d-e7da-e9bb1adb586f/AppIcon-1x_U007emarketing-0-10-0-85-220.png/100x100bb.jpg"
+            },
+            {
+              "app_id": "6740856036",
+              "app_name": "百萬神界",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/06/6f/82/066f82d8-4269-4aa1-f213-409913df5eee/AppIcon-0-0-1x_U007epad-0-1-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "6739527710",
+              "app_name": "神契：氣靈師",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/3b/44/04/3b4404df-0bdb-b05e-8cac-bb91cf03c06d/AppIcon-0-0-1x_U007epad-0-1-85-220.png/180x180bb.png"
+            }
+          ],
+          "rank": 7
+        },
+        {
+          "word_id": "27459165",
+          "word": "小森生活",
+          "hints": "5085",
+          "search_no": "90",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "6550895864",
+              "app_name": "森こもり生活 - 修復記憶裏的舊時光",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/c2/c3/05/c2c30533-3966-fd5c-01d0-38246d0140f8/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1506114382",
+              "app_name": "角落小夥伴 農場/Sumikkogurashi Farm",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/5c/de/15/5cde15f3-9ec1-05d0-030a-1f34577bdfdf/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1460208042",
+              "app_name": "拉拉熊 牧場 (Rilakkuma Farm)",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/59/7a/63/597a63d5-b102-d8c5-111f-0d46b7816055/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            }
+          ],
+          "rank": 8
+        },
+        {
+          "word_id": "873697",
+          "word": "碧藍航線",
+          "hints": "5042",
+          "search_no": "187",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1479022429",
+              "app_name": "碧藍航線",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/11/6a/1d/116a1d8d-a70b-5c2b-48d2-004411436402/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1571873795",
+              "app_name": "蔚藍檔案",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/29/4a/b3/294ab366-6b78-e111-8f28-e69847551115/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1630883882",
+              "app_name": "勝利女神：妮姬",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e2/2e/a7/e22ea7e8-d0f3-b864-5e14-2f365403bbaf/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            }
+          ],
+          "rank": 9
+        },
+        {
+          "word_id": "27200928",
+          "word": "楓之谷m",
+          "hints": "5035",
+          "search_no": "161",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1290086677",
+              "app_name": "楓之谷M - 奇幻冒險MMORPG",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/35/e0/49/35e049eb-0981-0052-da31-c6a2ac92e5c5/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1571250213",
+              "app_name": "楓之谷R：經典新定義",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/c5/09/9f/c5099fbc-5373-1f6a-50ad-71351cb4433d/AppIcon-1x_U007emarketing-0-10-0-85-220-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "1553717881",
+              "app_name": "MapleStory Worlds - 楓之谷世界",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/d2/79/bf/d279bfbc-7478-754b-3c9e-aaef10a7e844/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/180x180bb.png"
+            }
+          ],
+          "rank": 10
+        },
+        {
+          "word_id": "31295776",
+          "word": "三國群英傳M",
+          "hints": "5018",
+          "search_no": "41",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1455819770",
+              "app_name": "三國群英傳M",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/d3/0d/2f/d30d2faf-0c9b-e73b-0ee1-ea860941ea8f/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1215213697",
+              "app_name": "三國群英傳-霸王之業",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/22/b3/c1/22b3c10a-967d-1677-e9ba-c8d1b0848b51/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "1471488033",
+              "app_name": "三國殺名將傳",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/c6/ed/ec/c6edec4d-57f7-e4c1-9893-857ea508d954/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/180x180bb.png"
+            }
+          ],
+          "rank": 11
+        },
+        {
+          "word_id": "646255",
+          "word": "陰陽師",
+          "hints": "4960",
+          "search_no": "126",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1226382859",
+              "app_name": "陰陽師Onmyoji",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/5e/82/64/5e8264a3-acc1-d9a2-261e-d8cdc8d6401c/AppIcon-1x_U007emarketing-0-7-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1341653271",
+              "app_name": "決戰！平安京",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/de/bc/4c/debc4c0e-97c4-0185-92c5-527533f34df9/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1505283065",
+              "app_name": "戰雙帕彌什",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/f0/9d/f3/f09df301-f6ac-28ef-9206-99ba1b9ee7ee/AppIcon-1x_U007emarketing-0-7-0-85-220-0.png/180x180bb.png"
+            }
+          ],
+          "rank": 12
+        },
+        {
+          "word_id": "27013392",
+          "word": "崩壞3rd",
+          "hints": "4933",
+          "search_no": "18",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1233055283",
+              "app_name": "崩壞3rd",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/f6/17/ec/f617ec7a-ed3a-e001-2587-6d234e65d449/AppIcon-1x_U007emarketing-0-9-0-0-85-220-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "1599719154",
+              "app_name": "崩壞：星穹鐵道",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a2/e3/1d/a2e31dbd-3b62-8ed2-c025-3810e175c4a2/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "1606356401",
+              "app_name": "絕區零",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ce/f5/f6/cef5f661-5b26-95ef-c88d-a1fb8cae84ae/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/180x180bb.png"
+            }
+          ],
+          "rank": 13
+        },
+        {
+          "word_id": "27208550",
+          "word": "天堂2M",
+          "hints": "4929",
+          "search_no": "185",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1529208517",
+              "app_name": "天堂2M",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/3e/86/87/3e86873a-d95f-3ecf-982e-3dcf268460e3/AppIcon-1x_U007emarketing-0-7-0-85-220-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "1200727466",
+              "app_name": "天堂2：革命",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/2b/f6/b7/2bf6b726-03a5-f717-0a69-40e5458922da/AppIcon-1x_U007emarketing-0-7-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1229963744",
+              "app_name": "PURPLE：集遊玩、聊天、直播於一體",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/3b/6b/ef/3b6bef92-cf7d-b6a4-68b2-c973ef76c933/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/180x180bb.png"
+            }
+          ],
+          "rank": 14
+        },
+        {
+          "word_id": "287696",
+          "word": "ro",
+          "hints": "4911",
+          "search_no": "225",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "6743156171",
+              "app_name": "RO仙境傳說：曙光",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/4a/d0/7c/4ad07cd9-2b99-2e7c-114c-5702a933dc4c/AppIcon-0-1x_U007emarketing-0-11-0-85-220-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "1516214913",
+              "app_name": "RO仙境傳說：新世代的誕生",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/27/3a/df/273adf90-6e30-b8e3-4dfa-e12c252eead4/AppIcon-1x_U007emarketing-0-7-0-85-220-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "6741827909",
+              "app_name": "RO仙境傳說：守護永恆的愛 Classic",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/6e/e1/c9/6ee1c957-baa6-f8b1-cfd2-43012a210f5c/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/180x180bb.png"
+            }
+          ],
+          "rank": 15
+        },
+        {
+          "word_id": "147669",
+          "word": "怪物彈珠",
+          "hints": "4895",
+          "search_no": "95",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "850251209",
+              "app_name": "怪物彈珠",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/d1/ef/39/d1ef39bc-c473-7a79-16af-a80fdf89d91c/AppIcon-0-0-1x_U007emarketing-0-0-0-8-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/100x100bb.jpg"
+            },
+            {
+              "app_id": "583798880",
+              "app_name": "神魔之塔",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/f5/6d/06/f56d0652-1e46-30ab-ded5-170b35cfc4e6/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "950170216",
+              "app_name": "三国大戦スマッシュ！/さんすま",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/7e/57/65/7e576567-ae0b-29a4-ff44-574d11b91f05/AppIcon-1x_U007emarketing-0-11-0-85-220-0.png/180x180bb.png"
+            }
+          ],
+          "rank": 16
+        },
+        {
+          "word_id": "42624",
+          "word": "希望",
+          "hints": "4866",
+          "search_no": "150",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "6450971191",
+              "app_name": "希望M：戀戀不忘",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/4f/8a/2a/4f8a2afc-4580-b5d3-cb16-d6a5a856f79c/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1516214913",
+              "app_name": "RO仙境傳說：新世代的誕生",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/27/3a/df/273adf90-6e30-b8e3-4dfa-e12c252eead4/AppIcon-1x_U007emarketing-0-7-0-85-220-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "1327647567",
+              "app_name": "地下城堡2：暗潮",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/80/34/55/80345508-9e5e-9385-3a59-8ae73bebf0a2/AppIcon-0-0-1x_U007emarketing-0-0-0-10-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/180x180bb.png"
+            }
+          ],
+          "rank": 17
+        },
+        {
+          "word_id": "30278145",
+          "word": "重裝戰姬",
+          "hints": "4852",
+          "search_no": "178",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1556191500",
+              "app_name": "龍與少女交響曲",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/18/3a/12/183a1204-64c0-3bc1-0b64-1c4e1e695ece/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "1490554008",
+              "app_name": "食物語",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/1b/a8/01/1ba80198-6872-bd14-31f1-f60ebb984c4b/AppIcon-1x_U007emarketing-0-10-0-85-220-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "1292952049",
+              "app_name": "MARVEL 神威戰隊",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/f4/5c/c7/f45cc757-9e52-2899-ef5f-f5c33218f663/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/180x180bb.png"
+            }
+          ],
+          "rank": 18
+        },
+        {
+          "word_id": "428403",
+          "word": "黑色沙漠",
+          "hints": "4810",
+          "search_no": "221",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1477186880",
+              "app_name": "New 黑色沙漠 MOBILE",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/1b/9c/54/1b9c540a-54db-dd52-aa8f-4d2eb088f4ff/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "6740856036",
+              "app_name": "百萬神界",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/06/6f/82/066f82d8-4269-4aa1-f213-409913df5eee/AppIcon-0-0-1x_U007epad-0-1-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1460559702",
+              "app_name": "Black Desert+",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e4/3e/24/e43e24ce-6326-064e-a303-9a23c215dfe1/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/180x180bb.png"
+            }
+          ],
+          "rank": 19
+        },
+        {
+          "word_id": "62744",
+          "word": "神魔",
+          "hints": "4790",
+          "search_no": "193",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "583798880",
+              "app_name": "神魔之塔",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/f5/6d/06/f56d0652-1e46-30ab-ded5-170b35cfc4e6/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "785466672",
+              "app_name": "神魔助手(攻略、圖鑑、徵戰友) for 神魔之塔",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple114/v4/bb/1b/24/bb1b24d5-982b-6616-c535-b8bedac43025/AppIcon-1x_U007emarketing-4-85-220.jpeg/180x180bb.png"
+            },
+            {
+              "app_id": "6739527710",
+              "app_name": "神契：氣靈師",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/3b/44/04/3b4404df-0bdb-b05e-8cac-bb91cf03c06d/AppIcon-0-0-1x_U007epad-0-1-85-220.png/180x180bb.png"
+            }
+          ],
+          "rank": 20
+        },
+        {
+          "word_id": "17805",
+          "word": "rpg",
+          "hints": "4785",
+          "search_no": "232",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "6740856036",
+              "app_name": "百萬神界",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/06/6f/82/066f82d8-4269-4aa1-f213-409913df5eee/AppIcon-0-0-1x_U007epad-0-1-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "6739527710",
+              "app_name": "神契：氣靈師",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/3b/44/04/3b4404df-0bdb-b05e-8cac-bb91cf03c06d/AppIcon-0-0-1x_U007epad-0-1-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "6736560227",
+              "app_name": "異世幻想",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/81/ff/64/81ff644f-c801-e2b1-027e-2de1751411ad/AppIcon-1x_U007emarketing-0-11-0-85-220-0.png/180x180bb.png"
+            }
+          ],
+          "rank": 21
+        },
+        {
+          "word_id": "30424087",
+          "word": "大俠客",
+          "hints": "4768",
+          "search_no": "107",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1468451508",
+              "app_name": "大俠客-龍行天下",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/c1/7f/40/c17f406c-f9a1-123c-67e9-44c827c938f6/RelAppIcon-0-0-1x_U007emarketing-0-7-0-0-85-220.png/100x100bb.jpg"
+            },
+            {
+              "app_id": "1547216472",
+              "app_name": "封神异世录",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/d8/80/d4/d880d4ff-e229-a722-b49a-feeadbbc8bfe/p2_ios_dny-1x_U007emarketing-0-10-0-0-85-220-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "1571617177",
+              "app_name": "金龍群俠傳-單機大俠",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/ec/e2/cf/ece2cf4b-e4aa-c183-7154-7e67b9cfd827/AppIcon-1x_U007emarketing-0-7-0-85-220.png/180x180bb.png"
+            }
+          ],
+          "rank": 22
+        },
+        {
+          "word_id": "30609130",
+          "word": "戀戀炫舞團",
+          "hints": "4767",
+          "search_no": "17",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1477136990",
+              "app_name": "戀戀炫舞團-時尚換裝親密社交音舞",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/ff/a6/2d/ffa62dbd-8484-0b4d-f6c3-db895c7254dc/AppIcon-1x_U007emarketing-0-7-0-85-220-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "6469507193",
+              "app_name": "戀戀炫舞團-重置",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/73/98/98/73989877-4795-fd3b-cea7-c07ad6ee9574/AppIcon-1x_U007emarketing-0-9-0-85-220-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "1557595935",
+              "app_name": "世界計畫 繽紛舞台！feat. 初音未來",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/4e/72/b4/4e72b498-d1f3-b6d4-0cca-651d7f1673f6/AppIcon-1x_U007emarketing-0-7-0-85-220-0.png/180x180bb.png"
+            }
+          ],
+          "rank": 23
+        },
+        {
+          "word_id": "27960668",
+          "word": "第七史詩",
+          "hints": "4767",
+          "search_no": "79",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1322399438",
+              "app_name": "第七史詩",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/ea/d2/dc/ead2dc15-bab4-7488-76ed-623922c62521/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "6450099588",
+              "app_name": "棕色塵埃2- 冒汗心跳的RPG",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/f0/7a/48/f07a486d-523a-8b5c-8588-4869cd8c459c/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1630880836",
+              "app_name": "異域戰記 - 戰略動畫",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/df/88/a3/df88a390-d098-e1b6-3aa1-a35044da704b/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            }
+          ],
+          "rank": 24
+        },
+        {
+          "word_id": "8293326",
+          "word": "射雕英雄傳",
+          "hints": "4749",
+          "search_no": "70",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1315996920",
+              "app_name": "射雕英雄传-国际版(金庸正版授权)",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/0c/09/b2/0c09b2ff-5f9a-2585-67ba-7272940a91bb/AppIcon-1x_U007emarketing-0-9-0-85-220.png/100x100bb.jpg"
+            },
+            {
+              "app_id": "6451397602",
+              "app_name": "新倚天屠龍記",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/aa/c7/e6/aac7e65e-394b-00ee-cea1-538ca578194b/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1559873812",
+              "app_name": "煙雨江湖",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/a1/1b/26/a11b269e-7cd8-f3db-186b-53bffa9b83a5/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.jpeg/180x180bb.png"
+            }
+          ],
+          "rank": 25
+        },
+        {
+          "word_id": "27320854",
+          "word": "楓之谷",
+          "hints": "4737",
+          "search_no": "183",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1553717881",
+              "app_name": "MapleStory Worlds - 楓之谷世界",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/d2/79/bf/d279bfbc-7478-754b-3c9e-aaef10a7e844/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "1290086677",
+              "app_name": "楓之谷M - 奇幻冒險MMORPG",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/35/e0/49/35e049eb-0981-0052-da31-c6a2ac92e5c5/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1571250213",
+              "app_name": "楓之谷R：經典新定義",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/c5/09/9f/c5099fbc-5373-1f6a-50ad-71351cb4433d/AppIcon-1x_U007emarketing-0-10-0-85-220-0.png/180x180bb.png"
+            }
+          ],
+          "rank": 26
+        },
+        {
+          "word_id": "30185083",
+          "word": "龍族幻想",
+          "hints": "4735",
+          "search_no": "39",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "6740021133",
+              "app_name": "龍族幻想：勇者集結",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/18/a9/af/18a9af5e-ef90-f1f8-4267-7865a6d9cc88/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "1466598711",
+              "app_name": "龍族幻想",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple122/v4/8d/59/3a/8d593aa0-a89b-75ea-6823-7fe5e1f72c25/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "1144084266",
+              "app_name": "誅仙-重製版",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/08/9a/ca/089acab6-994c-2473-9966-589d5c633de2/AppIcon-0-0-1x_U007emarketing-0-0-0-10-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/180x180bb.png"
+            }
+          ],
+          "rank": 27
+        },
+        {
+          "word_id": "29218145",
+          "word": "食物語",
+          "hints": "4734",
+          "search_no": "158",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1490554008",
+              "app_name": "食物語",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/1b/a8/01/1ba80198-6872-bd14-31f1-f60ebb984c4b/AppIcon-1x_U007emarketing-0-10-0-85-220-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "1600234315",
+              "app_name": "花亦山心之月",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/46/64/26/466426d4-346f-b770-b15e-510869379f3d/AppIcon-1x_U007emarketing-0-7-0-85-220-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "1607215709",
+              "app_name": "食之契約-四週年",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple112/v4/cc/95/05/cc950588-7899-4ccf-d2e1-a180dbbeea72/AppIcon-1x_U007emarketing-0-7-0-85-220.png/180x180bb.png"
+            }
+          ],
+          "rank": 28
+        },
+        {
+          "word_id": "939648",
+          "word": "七龍珠",
+          "hints": "4727",
+          "search_no": "148",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1358222641",
+              "app_name": "DRAGON BALL LEGENDS -七龍珠 激戰傳說-",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/45/ef/ba/45efbadb-4d5c-d544-d578-0e5938c4248d/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "951627425",
+              "app_name": "DRAGON BALL Z -七龍珠爆裂激戰-",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/e9/dc/14/e9dc143b-603e-f66f-6cca-58ccf768c5ba/AppIcon-1x_U007emarketing-0-11-0-85-220-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "6744439943",
+              "app_name": "DRAGON BALL GEKISHIN SQUADRA",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/a8/c5/7d/a8c57d86-0dd1-ba52-7814-b694dd21358d/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/180x180bb.png"
+            }
+          ],
+          "rank": 29
+        },
+        {
+          "word_id": "26980307",
+          "word": "龍族拼圖",
+          "hints": "4721",
+          "search_no": "185",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "808027845",
+              "app_name": "Puzzle & Dragons",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/a4/9b/db/a49bdb7c-2a66-6e0b-f10d-2216f6eb52a8/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "6593672175",
+              "app_name": "PUZZLE & DRAGONS 0",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/b7/25/67/b72567f1-c4cf-e955-ce69-643ad7698a84/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1522259907",
+              "app_name": "Friends and Dragons - 益智角色扮演遊戲",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/03/5a/8f/035a8f0d-a98c-232e-a8f4-4515770b5ed9/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            }
+          ],
+          "rank": 30
+        },
+        {
+          "word_id": "31069923",
+          "word": "Top War: Battle Game",
+          "hints": "4716",
+          "search_no": "226",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1479198816",
+              "app_name": "口袋奇兵（Top War）",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/6e/54/e7/6e54e736-2812-fee0-266f-df88cd94b8e1/AppIcon-gl-1-0-0-1x_U007emarketing-0-11-0-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "672150402",
+              "app_name": "海島奇兵（Boom Beach）",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/fd/13/ba/fd13ba07-c6c8-3646-51e6-1486dfa031dc/AppIcon-0-0-1x_U007epad-0-1-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "6448786147",
+              "app_name": "最後的戰爭 - Last War",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/09/43/c3/0943c3f2-ac2a-ff4d-3528-2f28dcfab337/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            }
+          ],
+          "rank": 31
+        },
+        {
+          "word_id": "57236",
+          "word": "火柴人",
+          "hints": "4716",
+          "search_no": "211",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1477336151",
+              "app_name": "Supreme Duelist",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/29/6b/81/296b8171-e4ab-3f42-edba-0c2d73ea7f11/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "1001780528",
+              "app_name": "Stick War: Legacy",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/a2/7a/74/a27a74e1-d089-16d7-cd58-627dcdbf0335/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1613331604",
+              "app_name": "比武大會",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/84/61/5c/84615c67-f72b-208e-6784-f04d60f7a357/AppIcon-0-0-1x_U007emarketing-0-7-0-0-85-220.png/180x180bb.png"
+            }
+          ],
+          "rank": 32
+        },
+        {
+          "word_id": "32068804",
+          "word": "棒球明星夢",
+          "hints": "4714",
+          "search_no": "23",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1396381549",
+              "app_name": "棒球明星夢",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/5f/0e/80/5f0e80c9-27f7-152d-b784-cc3b59411ef1/AppIcon-1x_U007emarketing-0-7-0-85-220-0.png/100x100bb.jpg"
+            },
+            {
+              "app_id": "1527975534",
+              "app_name": "全民打棒球 Pro",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/17/23/9b/17239ba6-cf58-2dfd-cd34-569d4d629f2d/AppIcon-1x_U007emarketing-0-7-0-85-220-0.png/100x100bb.jpg"
+            },
+            {
+              "app_id": "1340866223",
+              "app_name": "職業棒球9",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/63/1f/bd/631fbd16-449c-cd0c-38d8-4d160e6cd764/AppIcon-1x_U007emarketing-0-11-0-85-220-0.png/180x180bb.png"
+            }
+          ],
+          "rank": 33
+        },
+        {
+          "word_id": "474115",
+          "word": "手遊",
+          "hints": "4713",
+          "search_no": "206",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "6479684643",
+              "app_name": "點擊修仙模擬器-仙俠RPG文字手遊",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/9c/e0/e1/9ce0e161-d76c-d895-aeec-00aea773de0c/AppIcon-1x_U007emarketing-0-7-0-85-220-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "1535178417",
+              "app_name": "新仙俠：起源",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/e3/bc/9f/e3bc9f51-a122-5210-7a39-11f61926407e/AppIcon-1x_U007emarketing-0-6-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1290086677",
+              "app_name": "楓之谷M - 奇幻冒險MMORPG",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/35/e0/49/35e049eb-0981-0052-da31-c6a2ac92e5c5/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            }
+          ],
+          "rank": 34
+        },
+        {
+          "word_id": "31460999",
+          "word": "花舞宮廷",
+          "hints": "4707",
+          "search_no": "41",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1491705532",
+              "app_name": "花舞宮廷",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/c1/e2/16/c1e2166f-2994-8396-395c-90b09a8451f9/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1598546305",
+              "app_name": "戀戀清庭:邂逅",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/85/23/02/852302fa-a9c1-df85-c7e0-633d947de421/AppIcon-0-0-1x_U007emarketing-0-0-0-10-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/100x100bb.jpg"
+            },
+            {
+              "app_id": "1598073276",
+              "app_name": "盛世芳華-宮廷劇情遊戲",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/29/67/17/2967177f-5a70-3edf-8205-08a883f35541/AppIcon-1x_U007epad-0-10-0-85-220-0.png/180x180bb.png"
+            }
+          ],
+          "rank": 35
+        },
+        {
+          "word_id": "28057747",
+          "word": "風之國度",
+          "hints": "4706",
+          "search_no": "43",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1329437159",
+              "app_name": "風之國度",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/1d/2e/26/1d2e267d-96ae-2489-1fbd-628f94eadb6e/AppIcon-0-0-1x_U007emarketing-0-9-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "6450074716",
+              "app_name": "風之物語-療癒RPG 輕度休閒開放世界MMO奇幻冒險手遊戲",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/bb/62/ec/bb62ec27-8071-e2a9-5782-36930da69591/AppIcon-0-0-1x_U007emarketing-0-0-0-10-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/100x100bb.jpg"
+            },
+            {
+              "app_id": "6458050011",
+              "app_name": "救世者之樹Ｍ",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/4a/cf/14/4acf1404-8b15-2c29-f1d8-21989f46056b/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            }
+          ],
+          "rank": 36
+        },
+        {
+          "word_id": "32913756",
+          "word": "新射雕群俠傳之鐵血丹心",
+          "hints": "4704",
+          "search_no": "14",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1286547287",
+              "app_name": "武俠群俠傳-單機養成武俠rpg遊戲",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/34/d7/0a/34d70a3b-093b-bfb7-0ea7-16aafa7aec6c/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "6476125182",
+              "app_name": "新不良人-輕策略養成遊戲",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/be/f1/4b/bef14b45-c8ac-1e38-8f2a-4dd71e3f9d9b/AppIcon-0-0-1x_U007epad-0-1-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1501484653",
+              "app_name": "武林英雄傳",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/05/32/bf/0532bf2d-23c2-74a0-72c8-4d0f6dc1eda1/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/180x180bb.png"
+            }
+          ],
+          "rank": 37
+        },
+        {
+          "word_id": "32708992",
+          "word": "新射鵰群俠傳之鐵血丹心",
+          "hints": "4702",
+          "search_no": "33",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1286547287",
+              "app_name": "武俠群俠傳-單機養成武俠rpg遊戲",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/34/d7/0a/34d70a3b-093b-bfb7-0ea7-16aafa7aec6c/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1485199769",
+              "app_name": "新笑傲江湖M",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/83/8f/ed/838feda5-8310-1871-31e8-c83bbd5ea20c/AppIcon-1x_U007emarketing-0-10-0-85-220-0.png/100x100bb.jpg"
+            },
+            {
+              "app_id": "6450700378",
+              "app_name": "新仙劍奇俠傳之揮劍問情",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/de/7a/c4/de7ac425-fb6f-a31d-b061-897b5ed528d1/AppIcon-1x_U007epad-0-11-0-85-220-0.png/180x180bb.png"
+            }
+          ],
+          "rank": 38
+        },
+        {
+          "word_id": "434339",
+          "word": "奇蹟暖暖",
+          "hints": "4693",
+          "search_no": "179",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1091427040",
+              "app_name": "奇迹暖暖",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/9b/50/fb/9b50fbcb-2792-4a5d-df5b-d2c78e0ac6c3/AppIcon-0-0-1x_U007emarketing-0-0-0-9-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "1447235764",
+              "app_name": "閃耀暖暖",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/41/b3/a6/41b3a6d7-b41a-b314-359c-0c5a64d4a998/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "6502623070",
+              "app_name": "無限暖暖",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/5a/55/a2/5a55a242-5d8b-40c2-497e-4ca9637fc917/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/180x180bb.png"
+            }
+          ],
+          "rank": 39
+        },
+        {
+          "word_id": "27623094",
+          "word": "風之谷",
+          "hints": "4680",
+          "search_no": "164",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1290086677",
+              "app_name": "楓之谷M - 奇幻冒險MMORPG",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/35/e0/49/35e049eb-0981-0052-da31-c6a2ac92e5c5/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1553717881",
+              "app_name": "MapleStory Worlds - 楓之谷世界",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/d2/79/bf/d279bfbc-7478-754b-3c9e-aaef10a7e844/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "1571250213",
+              "app_name": "楓之谷R：經典新定義",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/c5/09/9f/c5099fbc-5373-1f6a-50ad-71351cb4433d/AppIcon-1x_U007emarketing-0-10-0-85-220-0.png/180x180bb.png"
+            }
+          ],
+          "rank": 40
+        },
+        {
+          "word_id": "32905981",
+          "word": "射雕群俠傳",
+          "hints": "4677",
+          "search_no": "60",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "6450700378",
+              "app_name": "新仙劍奇俠傳之揮劍問情",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/de/7a/c4/de7ac425-fb6f-a31d-b061-897b5ed528d1/AppIcon-1x_U007epad-0-11-0-85-220-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "1286547287",
+              "app_name": "武俠群俠傳-單機養成武俠rpg遊戲",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/34/d7/0a/34d70a3b-093b-bfb7-0ea7-16aafa7aec6c/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1571617177",
+              "app_name": "金龍群俠傳-單機大俠",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/ec/e2/cf/ece2cf4b-e4aa-c183-7154-7e67b9cfd827/AppIcon-1x_U007emarketing-0-7-0-85-220.png/180x180bb.png"
+            }
+          ],
+          "rank": 41
+        },
+        {
+          "word_id": "30478337",
+          "word": "Tera Classic",
+          "hints": "4674",
+          "search_no": "8",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1200727466",
+              "app_name": "天堂2：革命",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/2b/f6/b7/2bf6b726-03a5-f717-0a69-40e5458922da/AppIcon-1x_U007emarketing-0-7-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1590111763",
+              "app_name": "真・三國無雙霸",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/90/c8/08/90c808ca-8d62-fe25-febe-12b17298c057/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "1617391485",
+              "app_name": "Block Blast!",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/ae/2a/f8/ae2af8fa-6cc3-2d64-8dbe-66d23f2a2813/AppIcon-0-0-1x_U007emarketing-0-11-0-sRGB-85-220.png/180x180bb.png"
+            }
+          ],
+          "rank": 42
+        },
+        {
+          "word_id": "32072802",
+          "word": "全面屍控",
+          "hints": "4672",
+          "search_no": "43",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1516465507",
+              "app_name": "全面屍控",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/58/ef/b2/58efb259-30a4-1491-0a3d-24e40817f9fe/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1540557475",
+              "app_name": "七號堡壘",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/79/3f/07/793f07df-61cc-b522-48d5-c5dd4a435561/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1469492048",
+              "app_name": "Zombie Frontier 4: Sniper War",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/52/ba/06/52ba0683-53cd-4250-eecf-a5378ce29e7f/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            }
+          ],
+          "rank": 43
+        },
+        {
+          "word_id": "28335532",
+          "word": "穿越時空的貓",
+          "hints": "4672",
+          "search_no": "20",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1439565347",
+              "app_name": "ANOTHER EDEN 穿越時空的貓",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/0e/36/1a/0e361aea-f702-d039-ac0f-f62bab390788/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1642354115",
+              "app_name": "又一個地下城",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/f6/13/1f/f6131fc7-8455-a40e-e342-68d9dec5150f/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1114467662",
+              "app_name": "美男戰國 - 穿越時空之戀",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/18/dd/f0/18ddf006-f6ba-0e7e-a51d-850720fe5b43/AppIcon-0-0-1x_U007emarketing-0-6-0-85-220.png/180x180bb.png"
+            }
+          ],
+          "rank": 44
+        },
+        {
+          "word_id": "27582077",
+          "word": "夢幻模擬戰",
+          "hints": "4672",
+          "search_no": "131",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1424179149",
+              "app_name": "夢幻模擬戰",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/d2/b8/a9/d2b8a94d-83f6-fe26-d0bb-6284a29040ee/AppIcon-1x_U007emarketing-0-10-0-85-220-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "1181774280",
+              "app_name": "Fire Emblem Heroes",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/bd/cf/cb/bdcfcb1d-2717-b104-7d97-f43aefca4d58/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "6503430688",
+              "app_name": "創世紀戰M：阿修羅計畫",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/6e/9f/dd/6e9fdd31-68e8-d4b3-b074-910bd22b4aa0/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/180x180bb.png"
+            }
+          ],
+          "rank": 45
+        },
+        {
+          "word_id": "32281410",
+          "word": "全面屍控-屍速列車2聯名手遊",
+          "hints": "4671",
+          "search_no": "5",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "852912420",
+              "app_name": "魔靈召喚 X TEKKEN 8聯名火熱進行中",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/77/9f/fc/779ffc88-1bb8-abc4-1f91-31b847f92917/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1614359303",
+              "app_name": "Zombie Capital",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/24/a0/52/24a052e8-a162-43a1-5c01-d6a908b66ec0/AppIcon-1x_U007emarketing-0-9-0-85-220-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "1264483706",
+              "app_name": "榮耀繼承者",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/20/72/3b/20723b2c-6655-439e-82db-dc764e09e435/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/180x180bb.png"
+            }
+          ],
+          "rank": 46
+        },
+        {
+          "word_id": "5515943",
+          "word": "掛機遊戲",
+          "hints": "4664",
+          "search_no": "218",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1572788053",
+              "app_name": "一念逍遙：涅槃重生",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/8c/61/78/8c617812-a5f8-db1a-65cc-65a2fc35cc96/AppIcon-1x_U007emarketing-0-7-0-0-85-220-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "6466405648",
+              "app_name": "菇勇者傳說-送3000抽",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/a4/2a/03/a42a0324-1e91-2c4a-c470-40d2d340aa1c/AppIcon-0-0-1x_U007emarketing-0-10-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1120294802",
+              "app_name": "點擊泰坦2 (Tap Titans 2) - 傳說放置英雄",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/d5/65/d6/d565d680-2628-fa59-a6ca-90daa56219cd/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            }
+          ],
+          "rank": 47
+        },
+        {
+          "word_id": "456944",
+          "word": "slime",
+          "hints": "4664",
+          "search_no": "211",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1618701110",
+              "app_name": "Legend of Slime: Idle War Game",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/df/7a/a3/df7aa305-5102-c813-7fec-a3f0bdf76d20/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1375330146",
+              "app_name": "Super Slime Simulator",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/08/a3/1e/08a31e38-7ac7-19cd-9124-2b06f5919051/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1577316192",
+              "app_name": "轉生史萊姆 魔王與龍的建國譚",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/26/8b/57/268b57de-48ac-7615-d78f-646e0fb5ec3d/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            }
+          ],
+          "rank": 48
+        },
+        {
+          "word_id": "28092587",
+          "word": "紫禁繁花",
+          "hints": "4660",
+          "search_no": "18",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1442053164",
+              "app_name": "紫禁繁花 - 夢幻家裝慶典",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple122/v4/4d/21/50/4d215096-573e-ff24-a99f-4448832c825b/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "1487581537",
+              "app_name": "藍顏清夢",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/63/84/fd/6384fd9a-1eb1-cfbc-005e-d5dc8917a452/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "1598073276",
+              "app_name": "盛世芳華-宮廷劇情遊戲",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/29/67/17/2967177f-5a70-3edf-8205-08a883f35541/AppIcon-1x_U007epad-0-10-0-85-220-0.png/180x180bb.png"
+            }
+          ],
+          "rank": 49
+        },
+        {
+          "word_id": "31435480",
+          "word": "鬼鬥",
+          "hints": "4657",
+          "search_no": "158",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "6736637080",
+              "app_name": "鬥破蒼穹：無雙",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/99/15/30/991530ff-1d8c-1624-7dc7-1e8130ecd42e/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "511700298",
+              "app_name": "表情包大全 - 天天暴走鬼畜斗图神器",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/0c/86/a3/0c86a3a3-ff80-90e9-9e60-471a0301434a/AppIcon-1x_U007emarketing-0-4-0-85-220-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "6745178365",
+              "app_name": "戰靈異聞社-道士猛鬼刺激塔防副本玩法開啟",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/d8/09/fe/d809fee8-0985-8dd2-111e-95e6ff2fa67c/AppIcon-0-0-1x_U007epad-0-11-0-85-220.png/180x180bb.png"
+            }
+          ],
+          "rank": 50
+        },
+        {
+          "word_id": "28252390",
+          "word": "生存遊戲",
+          "hints": "4657",
+          "search_no": "228",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "6477342989",
+              "app_name": "Once Human",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/d0/7f/63/d07f63c2-34ec-a9f2-27bd-4f3053a44300/AppIcon-0-0-1x_U007emarketing-0-11-0-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1583009434",
+              "app_name": "迷失蔚藍",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/94/f2/fe/94f2fedb-7c9d-7d8f-907a-05ab3574f6ee/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1241932094",
+              "app_name": "Last Day on Earth: Survival",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/9d/fe/42/9dfe422c-8d38-ba31-6fe2-d9edee598c38/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            }
+          ],
+          "rank": 51
+        },
+        {
+          "word_id": "29840990",
+          "word": "傳奇商店",
+          "hints": "4655",
+          "search_no": "45",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1361253233",
+              "app_name": "傳奇商店：製作與設計",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/37/6e/20/376e206d-a01d-4048-2135-36fe1eeb9a0c/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "947276663",
+              "app_name": "逗趣醫院",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/5f/e6/19/5fe61951-22b1-68b8-9871-d53a23f4d7ac/AppIcon-1x_U007epad-0-11-0-85-220-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "1513556438",
+              "app_name": "Zombie Shop",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/46/5e/0f/465e0fe0-50db-7003-2072-30649b0509a8/AppIcon-1x_U007emarketing-0-7-0-85-220.png/100x100bb.jpg"
+            }
+          ],
+          "rank": 52
+        },
+        {
+          "word_id": "28253078",
+          "word": "運動遊戲",
+          "hints": "4655",
+          "search_no": "231",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1553158383",
+              "app_name": "Active Arcade",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple122/v4/3f/cb/5c/3fcb5c02-1f8a-87bc-5308-9e247ee7f27a/AppIcon-1x_U007emarketing-0-7-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1616808239",
+              "app_name": "MLB Perfect Inning 25",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/47/cb/d3/47cbd393-580a-a2a3-8597-9397218015c4/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "1252850847",
+              "app_name": "《NBA 2K Mobile》手機籃球遊戲",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/6d/77/81/6d778156-3a2b-8f80-456d-91ba84ea8319/AppIcon-0-0-1x_U007epad-0-1-0-512MB-85-220.png/180x180bb.png"
+            }
+          ],
+          "rank": 53
+        },
+        {
+          "word_id": "190164",
+          "word": "方舟",
+          "hints": "4653",
+          "search_no": "153",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "6751102676",
+              "app_name": "方舟運算",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/59/24/72/5924728d-1000-502e-e214-a6249ec30610/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1490985322",
+              "app_name": "明日方舟",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/41/8e/a5/418ea593-40da-86d8-2589-12e6e80234bd/AppIcon-0-0-1x_U007emarketing-0-0-0-9-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "6639622324",
+              "app_name": "ARK: Ultimate Mobile Edition",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/59/2a/54/592a5470-9c15-3097-be5c-3982432fce95/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/180x180bb.png"
+            }
+          ],
+          "rank": 54
+        },
+        {
+          "word_id": "27885183",
+          "word": "方舟生存進化",
+          "hints": "4651",
+          "search_no": "97",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "6639622324",
+              "app_name": "ARK: Ultimate Mobile Edition",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/59/2a/54/592a5470-9c15-3097-be5c-3982432fce95/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "479516143",
+              "app_name": "Minecraft",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/48/d0/37/48d0370e-cc6c-f1e2-1d36-6322809ba598/AppIcon-0-0-1x_U007emarketing-0-10-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1599745755",
+              "app_name": "木筏生存 - 多人游戏",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e5/c8/a3/e5c8a37b-986f-49a4-48ec-3090bfca1a69/AppIcon-1x_U007emarketing-0-7-0-85-220-0.png/100x100bb.jpg"
+            }
+          ],
+          "rank": 55
+        },
+        {
+          "word_id": "28263478",
+          "word": "宮廷遊戲",
+          "hints": "4649",
+          "search_no": "122",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1491705532",
+              "app_name": "花舞宮廷",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/c1/e2/16/c1e2166f-2994-8396-395c-90b09a8451f9/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1426265693",
+              "app_name": "宮廷計-成就妳的宮廷大夢",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/a0/ed/20/a0ed2041-9840-5f4a-e58a-21956d29eadd/AppIcon-0-0-1x_U007emarketing-0-0-0-6-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "1598546305",
+              "app_name": "戀戀清庭:邂逅",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/85/23/02/852302fa-a9c1-df85-c7e0-633d947de421/AppIcon-0-0-1x_U007emarketing-0-0-0-10-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/100x100bb.jpg"
+            }
+          ],
+          "rank": 56
+        },
+        {
+          "word_id": "28263446",
+          "word": "格鬥天王",
+          "hints": "4647",
+          "search_no": "171",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1029763991",
+              "app_name": "拳皇98 終極之戰OL",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/79/d7/9a/79d79af0-b6cb-d38c-b7d3-bbb87fe388f8/AppIcon-1x_U007emarketing-0-7-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1410648677",
+              "app_name": "拳皇命運-經典SNK正版授權",
+              "icon": "https://is2-ssl.mzstatic.com/image/thumb/Purple126/v4/8c/a3/38/8ca3388c-1566-121d-0cb8-46ed081c8796/AppIcon-0-0-1x_U007emarketing-0-0-0-10-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/100x100bb.jpg"
+            },
+            {
+              "app_id": "1358222641",
+              "app_name": "DRAGON BALL LEGENDS -七龍珠 激戰傳說-",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/45/ef/ba/45efbadb-4d5c-d544-d578-0e5938c4248d/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            }
+          ],
+          "rank": 57
+        },
+        {
+          "word_id": "584102",
+          "word": "crash fever",
+          "hints": "4645",
+          "search_no": "34",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "950175410",
+              "app_name": "クラッシュフィーバー パズルRPG 新感覚ブッ壊しバトル！",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/b4/4f/b0/b44fb0ea-bcaa-7f37-e850-e7f5872804a0/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "553834731",
+              "app_name": "糖果傳奇",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/13/a5/eb/13a5eb0a-3889-0b6a-8642-decef645b8a8/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1468882189",
+              "app_name": "Time Management Games Craze",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/26/18/35/26183536-0900-b70c-5eae-9941d9ce9208/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            }
+          ],
+          "rank": 58
+        },
+        {
+          "word_id": "31544867",
+          "word": "時空旅人",
+          "hints": "4642",
+          "search_no": "21",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "6445804798",
+              "app_name": "時空中的繪旅人",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/f7/0e/0b/f70e0bb0-c54d-47b9-0a0c-5832144973f0/AppIcon-1x_U007emarketing-0-10-0-85-220-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "1611708446",
+              "app_name": "歧路旅人：大陸的霸者",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b0/73/54/b07354ce-2692-ccd5-c3e5-fc70eb520a31/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "6450074716",
+              "app_name": "風之物語-療癒RPG 輕度休閒開放世界MMO奇幻冒險手遊戲",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/bb/62/ec/bb62ec27-8071-e2a9-5782-36930da69591/AppIcon-0-0-1x_U007emarketing-0-0-0-10-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/100x100bb.jpg"
+            }
+          ],
+          "rank": 59
+        },
+        {
+          "word_id": "29398700",
+          "word": "完美世界m",
+          "hints": "4642",
+          "search_no": "109",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1449689251",
+              "app_name": "完美世界M",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/3c/64/23/3c6423de-de1c-05be-3d7b-d3bf7d069fd8/AppIcon-1x_U007emarketing-0-9-0-85-220-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "6472643035",
+              "app_name": "完美世界W",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/13/20/d0/1320d0c2-e7b4-aca0-f944-856cb37c76ba/AppIcon-0-0-1x_U007emarketing-0-9-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1460786904",
+              "app_name": "完美世界电竞",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/03/26/4d/03264db2-03a6-9a64-355e-365151ff4f13/AppIcon-0-0-1x_U007emarketing-0-6-0-sRGB-85-220.png/180x180bb.png"
+            }
+          ],
+          "rank": 60
+        },
+        {
+          "word_id": "13927",
+          "word": "mlb",
+          "hints": "4639",
+          "search_no": "130",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "493619333",
+              "app_name": "MLB",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a3/93/dc/a393dc18-fd9a-2297-18e9-68d8d389cdaf/AppIcon-0-0-1x_U007emarketing-0-8-0-sRGB-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1059665257",
+              "app_name": "MLB：9局職棒25",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/d6/79/34/d6793457-c330-707e-18f5-a4704ab97cca/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1616808239",
+              "app_name": "MLB Perfect Inning 25",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/47/cb/d3/47cbd393-580a-a2a3-8597-9397218015c4/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/180x180bb.png"
+            }
+          ],
+          "rank": 61
+        },
+        {
+          "word_id": "29239460",
+          "word": "時空貓",
+          "hints": "4638",
+          "search_no": "49",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1439565347",
+              "app_name": "ANOTHER EDEN 穿越時空的貓",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/0e/36/1a/0e361aea-f702-d039-ac0f-f62bab390788/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1611490041",
+              "app_name": "MementoMori",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/4f/1a/8d/4f1a8dec-a9e8-d6db-f563-88c3c6b20ee3/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1642354115",
+              "app_name": "又一個地下城",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/f6/13/1f/f6131fc7-8455-a40e-e342-68d9dec5150f/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            }
+          ],
+          "rank": 62
+        },
+        {
+          "word_id": "41337",
+          "word": "射雕",
+          "hints": "4638",
+          "search_no": "96",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "6451397602",
+              "app_name": "新倚天屠龍記",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/aa/c7/e6/aac7e65e-394b-00ee-cea1-538ca578194b/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1315996920",
+              "app_name": "射雕英雄传-国际版(金庸正版授权)",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/0c/09/b2/0c09b2ff-5f9a-2585-67ba-7272940a91bb/AppIcon-1x_U007emarketing-0-9-0-85-220.png/100x100bb.jpg"
+            },
+            {
+              "app_id": "1557823712",
+              "app_name": "WePlay - 線上桌遊吧",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/d2/e1/55/d2e1557e-5dfa-1bb4-f540-8ebf66cd2660/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/180x180bb.png"
+            }
+          ],
+          "rank": 63
+        },
+        {
+          "word_id": "27200602",
+          "word": "射鵰英雄傳3d",
+          "hints": "4637",
+          "search_no": "47",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1601469450",
+              "app_name": "老鼠 模擬器 家庭 生活",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/c6/15/20/c6152095-b12d-ecdd-6e44-dcdc7cb0cc28/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "1549828604",
+              "app_name": "天涯明月刀 M - Garena",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/f9/50/41/f95041df-666c-9aa6-323f-93d39ea0be01/AppIcon-1x_U007emarketing-0-9-0-85-220-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "1581753546",
+              "app_name": "吊車技術哪家強!",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple122/v4/eb/4f/cf/eb4fcf0c-d2c6-8383-ef4c-aa6e42c34183/AppIcon-1x_U007emarketing-0-7-0-85-220-0.png/100x100bb.jpg"
+            }
+          ],
+          "rank": 64
+        },
+        {
+          "word_id": "27162934",
+          "word": "another eden",
+          "hints": "4636",
+          "search_no": "7",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1439565347",
+              "app_name": "ANOTHER EDEN 穿越時空的貓",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/0e/36/1a/0e361aea-f702-d039-ac0f-f62bab390788/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1079395220",
+              "app_name": "Sdorica 萬象物語",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/93/58/7f/93587fdc-e307-cbf2-5660-a91516af0362/AppIcon-1x_U007emarketing-0-7-0-85-220-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "1290086677",
+              "app_name": "楓之谷M - 奇幻冒險MMORPG",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/35/e0/49/35e049eb-0981-0052-da31-c6a2ac92e5c5/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            }
+          ],
+          "rank": 65
+        },
+        {
+          "word_id": "28252257",
+          "word": "勇者鬥惡龍",
+          "hints": "4633",
+          "search_no": "69",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "933113994",
+              "app_name": "DRAGON QUEST V",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/4c/a9/25/4ca92502-a197-7272-300e-269b79f69229/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "862972069",
+              "app_name": "DRAGON QUEST VIII",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/f2/fa/fc/f2fafc32-7422-0bc1-22fb-b3a974279458/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "6504323939",
+              "app_name": "勇者鬥惡龍X　覺醒的五種族　OFFLINE",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/7a/ce/2d/7ace2d0c-975d-82f2-38d9-78068dd307f3/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            }
+          ],
+          "rank": 66
+        },
+        {
+          "word_id": "29986675",
+          "word": "浮生為卿歌",
+          "hints": "4632",
+          "search_no": "72",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1447348210",
+              "app_name": "浮生為卿歌-邀君夢回千年汴京",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/63/9e/d5/639ed5d4-5426-91fd-464c-8b4098324c14/AppIcon-1x_U007emarketing-0-6-85-220-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "6451401886",
+              "app_name": "浮生憶玲瓏-長月燼明聯動",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e4/ab/5d/e4ab5d04-c1bd-6331-ff0a-a041ff811cb6/AppIcon-1x_U007emarketing-0-6-85-220-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "6444551124",
+              "app_name": "代號鳶",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/3e/93/66/3e936687-f3c8-34d7-ba00-122d941bf273/AppIcon-1x_U007emarketing-0-7-0-85-220-0.png/180x180bb.png"
+            }
+          ],
+          "rank": 67
+        },
+        {
+          "word_id": "27173238",
+          "word": "江湖大夢",
+          "hints": "4632",
+          "search_no": "141",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1367112753",
+              "app_name": "江湖大夢",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple112/v4/58/14/2c/58142cca-d6ae-f0e5-0fec-3ff1827b43fa/AppIcon-1x_U007emarketing-0-10-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "6474654939",
+              "app_name": "逆水寒",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/65/c8/ac/65c8acdd-2381-df17-b2fa-96af020c2bcb/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1549828604",
+              "app_name": "天涯明月刀 M - Garena",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/f9/50/41/f95041df-666c-9aa6-323f-93d39ea0be01/AppIcon-1x_U007emarketing-0-9-0-85-220-0.png/180x180bb.png"
+            }
+          ],
+          "rank": 68
+        },
+        {
+          "word_id": "134125",
+          "word": "天堂2",
+          "hints": "4632",
+          "search_no": "176",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1529208517",
+              "app_name": "天堂2M",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/3e/86/87/3e86873a-d95f-3ecf-982e-3dcf268460e3/AppIcon-1x_U007emarketing-0-7-0-85-220-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "1200727466",
+              "app_name": "天堂2：革命",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/2b/f6/b7/2bf6b726-03a5-f717-0a69-40e5458922da/AppIcon-1x_U007emarketing-0-7-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1444980563",
+              "app_name": "天堂W",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/87/96/b9/8796b98c-ed5d-000b-52e0-3705f1283e41/AppIcon-1x_U007emarketing-0-7-0-85-220-0.png/180x180bb.png"
+            }
+          ],
+          "rank": 69
+        },
+        {
+          "word_id": "5831216",
+          "word": "宮廷",
+          "hints": "4631",
+          "search_no": "130",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1491705532",
+              "app_name": "花舞宮廷",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/c1/e2/16/c1e2166f-2994-8396-395c-90b09a8451f9/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1426265693",
+              "app_name": "宮廷計-成就妳的宮廷大夢",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/a0/ed/20/a0ed2041-9840-5f4a-e58a-21956d29eadd/AppIcon-0-0-1x_U007emarketing-0-0-0-6-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "1598546305",
+              "app_name": "戀戀清庭:邂逅",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/85/23/02/852302fa-a9c1-df85-c7e0-633d947de421/AppIcon-0-0-1x_U007emarketing-0-0-0-10-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/100x100bb.jpg"
+            }
+          ],
+          "rank": 70
+        },
+        {
+          "word_id": "609026",
+          "word": "少女前線",
+          "hints": "4631",
+          "search_no": "166",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "6499011827",
+              "app_name": "少女前線2：追放",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/7f/13/3f/7f133f91-d403-2078-f4a7-dc32a594a53c/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "1181727699",
+              "app_name": "少女前線 Girls' Frontline",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/ef/ee/f5/efeef5a9-bc67-6856-0901-f9afa6c49bcc/AppIcon-1x_U007emarketing-0-11-0-85-220-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "6535676007",
+              "app_name": "命運聖契：少女的羈絆",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/98/37/58/98375851-10cb-5393-f342-93bcefc08a46/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            }
+          ],
+          "rank": 71
+        },
+        {
+          "word_id": "12137",
+          "word": "kof",
+          "hints": "4631",
+          "search_no": "104",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "6499177365",
+              "app_name": "THE KING OF FIGHTERS AFK",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/f4/46/a8/f446a873-d0b2-0706-8eb1-4e4a3a4c047b/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "958070620",
+              "app_name": "THE KING OF FIGHTERS-i 2012(F)",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple3/v4/6f/b9/0c/6fb90c63-896b-22fe-f77d-e267751bbd0f/pr_source.png/100x100bb.jpg"
+            },
+            {
+              "app_id": "1029763991",
+              "app_name": "拳皇98 終極之戰OL",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/79/d7/9a/79d79af0-b6cb-d38c-b7d3-bbb87fe388f8/AppIcon-1x_U007emarketing-0-7-85-220.png/180x180bb.png"
+            }
+          ],
+          "rank": 72
+        },
+        {
+          "word_id": "921708",
+          "word": "王國",
+          "hints": "4630",
+          "search_no": "188",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "6450953550",
+              "app_name": "王國之歌（Top Heroes）",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/66/9c/c4/669cc4b0-16cc-773d-0df3-a1ade986ad9f/AppIcon-1x_U007emarketing-0-8-0-0-85-220-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "1509450845",
+              "app_name": "薑餅人王國",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/cb/d5/6b/cbd56bb7-863d-65e6-5399-829b69e74651/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "6480043389",
+              "app_name": "勇闖王國-自由冒險RPG",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/4f/fe/87/4ffe879d-73f3-037b-9701-9c6ec15b83a1/AppIcon-0-0-1x_U007epad-0-1-85-220.jpeg/180x180bb.png"
+            }
+          ],
+          "rank": 73
+        },
+        {
+          "word_id": "28099702",
+          "word": "換裝遊戲",
+          "hints": "4629",
+          "search_no": "244",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1515682612",
+              "app_name": "女生换装游戏 - 我的暖暖生活，少女养成物语手游",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple122/v4/52/26/98/52269830-e14d-38c8-57d6-ab0a698a582e/AppIcon-1x_U007emarketing-0-7-0-85-220.png/100x100bb.jpg"
+            },
+            {
+              "app_id": "6740607047",
+              "app_name": "我的休閒時光",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/4f/46/7f/4f467f8f-9972-4adc-78e0-26575162c8ac/AppIcon-1x_U007emarketing-0-11-0-85-220-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "1447235764",
+              "app_name": "閃耀暖暖",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/41/b3/a6/41b3a6d7-b41a-b314-359c-0c5a64d4a998/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/180x180bb.png"
+            }
+          ],
+          "rank": 74
+        },
+        {
+          "word_id": "27230505",
+          "word": "少女咖啡槍",
+          "hints": "4628",
+          "search_no": "2",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1490554008",
+              "app_name": "食物語",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/1b/a8/01/1ba80198-6872-bd14-31f1-f60ebb984c4b/AppIcon-1x_U007emarketing-0-10-0-85-220-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "1632869135",
+              "app_name": "航海紛爭-航海王者復古懷舊遊戲",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/87/f5/5f/87f55f4c-e5a1-9a9f-d6b8-a8ecf75b09a0/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/180x180bb.png"
+            }
+          ],
+          "rank": 75
+        },
+        {
+          "word_id": "41871",
+          "word": "少女",
+          "hints": "4628",
+          "search_no": "194",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1587828931",
+              "app_name": "少女迴戰",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/7b/6b/88/7b6b88de-e3ed-9f1d-4886-6be3e9ee4179/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "6444619754",
+              "app_name": "少女戰爭",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/45/91/9d/45919dfa-a451-c0e2-bda2-3ec1c9de6384/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "6535676007",
+              "app_name": "命運聖契：少女的羈絆",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/98/37/58/98375851-10cb-5393-f342-93bcefc08a46/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            }
+          ],
+          "rank": 76
+        },
+        {
+          "word_id": "38911",
+          "word": "女神",
+          "hints": "4627",
+          "search_no": "157",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1613742212",
+              "app_name": "女神異聞錄：夜幕魅影",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/81/72/00/8172004f-9e82-1a6c-b3fb-0bcad373aec3/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1478505280",
+              "app_name": "Idle Angels",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/42/fb/ec/42fbec07-606a-e4fc-485f-36dbc30dcf69/AppIcon-0-0-1x_U007epad-0-1-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1630883882",
+              "app_name": "勝利女神：妮姬",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e2/2e/a7/e22ea7e8-d0f3-b864-5e14-2f365403bbaf/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            }
+          ],
+          "rank": 77
+        },
+        {
+          "word_id": "31285346",
+          "word": "大聖歸來m",
+          "hints": "4626",
+          "search_no": "2",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1487438906",
+              "app_name": "奇蹟MU:跨時代",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple122/v4/2b/28/06/2b280606-cec6-b5cb-fbe8-839220f5bf72/AppIcon-1x_U007emarketing-0-7-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1642164363",
+              "app_name": "割草地下城",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple122/v4/89/59/41/89594108-eb00-9b29-80b6-33869a66fa88/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/180x180bb.png"
+            }
+          ],
+          "rank": 78
+        },
+        {
+          "word_id": "32081560",
+          "word": "少女平和",
+          "hints": "4625",
+          "search_no": "158",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1556191500",
+              "app_name": "龍與少女交響曲",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/18/3a/12/183a1204-64c0-3bc1-0b64-1c4e1e695ece/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "1272534063",
+              "app_name": "BanG Dream! 少女樂團派對",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/c8/9b/06/c89b067a-ea79-49ba-1e99-2b98ef610b97/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "6711351494",
+              "app_name": "純白大作戰：音樂美少女的魔法冒險",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/74/5c/b8/745cb890-9372-757b-f1ef-89c9ace21a57/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            }
+          ],
+          "rank": 79
+        },
+        {
+          "word_id": "31861819",
+          "word": "雲想衣裳花想容",
+          "hints": "4624",
+          "search_no": "1",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1600234315",
+              "app_name": "花亦山心之月",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/46/64/26/466426d4-346f-b770-b15e-510869379f3d/AppIcon-1x_U007emarketing-0-7-0-85-220-0.png/180x180bb.png"
+            }
+          ],
+          "rank": 80
+        },
+        {
+          "word_id": "29270961",
+          "word": "Top War",
+          "hints": "4623",
+          "search_no": "195",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "6448786147",
+              "app_name": "最後的戰爭 - Last War",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/09/43/c3/0943c3f2-ac2a-ff4d-3528-2f28dcfab337/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1479198816",
+              "app_name": "口袋奇兵（Top War）",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/6e/54/e7/6e54e736-2812-fee0-266f-df88cd94b8e1/AppIcon-gl-1-0-0-1x_U007emarketing-0-11-0-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1579356887",
+              "app_name": "Tower War - Tactical Conquest",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/fc/85/7c/fc857cf1-10c9-87fb-b224-cdd26ce0f2b9/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            }
+          ],
+          "rank": 81
+        },
+        {
+          "word_id": "29089614",
+          "word": "最後的",
+          "hints": "4623",
+          "search_no": "168",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1530784975",
+              "app_name": "最後的克勞迪亞",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/9c/a6/37/9ca63748-dee2-f0d5-9795-e2dd5c51a640/AppIcon-1x_U007emarketing-0-7-0-85-220-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "6739530701",
+              "app_name": "LAST ORIGIN：最後的起源",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/c4/9f/2b/c49f2bc8-72d2-2c62-4196-19aedeb7f895/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "6448786147",
+              "app_name": "最後的戰爭 - Last War",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/09/43/c3/0943c3f2-ac2a-ff4d-3528-2f28dcfab337/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            }
+          ],
+          "rank": 82
+        },
+        {
+          "word_id": "29054761",
+          "word": "航海霸業（國際版）",
+          "hints": "4623",
+          "search_no": "21",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1435582926",
+              "app_name": "航海霸業（國際版）",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a2/1c/28/a21c2840-9e79-87f1-b9a3-23e38e24bd55/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1660850121",
+              "app_name": "大航海時代：起源",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/a8/a9/6a/a8a96aba-72f1-dc52-ee76-2c32f1123f61/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1557845520",
+              "app_name": "航海纷争-航海王者復古懷舊遊戲",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/53/17/13/53171394-cfa4-def2-8cef-486e077e186c/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            }
+          ],
+          "rank": 83
+        },
+        {
+          "word_id": "27711579",
+          "word": "航海時代",
+          "hints": "4623",
+          "search_no": "37",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "6670187787",
+              "app_name": "大航海時代：傳說",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/aa/7a/c0/aa7ac064-5bca-3402-b510-5ee13c714401/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1435582926",
+              "app_name": "航海霸業（國際版）",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a2/1c/28/a21c2840-9e79-87f1-b9a3-23e38e24bd55/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1571063816",
+              "app_name": "大航海歸來-3D航海時代",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple112/v4/fe/18/96/fe1896ea-01b9-22fe-f7cc-bc9ab7f693c7/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/100x100bb.jpg"
+            }
+          ],
+          "rank": 84
+        },
+        {
+          "word_id": "47573",
+          "word": "拳皇",
+          "hints": "4623",
+          "search_no": "164",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1029763991",
+              "app_name": "拳皇98 終極之戰OL",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/79/d7/9a/79d79af0-b6cb-d38c-b7d3-bbb87fe388f8/AppIcon-1x_U007emarketing-0-7-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "958070620",
+              "app_name": "THE KING OF FIGHTERS-i 2012(F)",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple3/v4/6f/b9/0c/6fb90c63-896b-22fe-f77d-e267751bbd0f/pr_source.png/100x100bb.jpg"
+            },
+            {
+              "app_id": "1410648677",
+              "app_name": "拳皇命運-經典SNK正版授權",
+              "icon": "https://is2-ssl.mzstatic.com/image/thumb/Purple126/v4/8c/a3/38/8ca3388c-1566-121d-0cb8-46ed081c8796/AppIcon-0-0-1x_U007emarketing-0-0-0-10-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/100x100bb.jpg"
+            }
+          ],
+          "rank": 85
+        },
+        {
+          "word_id": "31536183",
+          "word": "奇蹟mu:跨時代",
+          "hints": "4620",
+          "search_no": "10",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1487438906",
+              "app_name": "奇蹟MU:跨時代",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple122/v4/2b/28/06/2b280606-cec6-b5cb-fbe8-839220f5bf72/AppIcon-1x_U007emarketing-0-7-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1639516035",
+              "app_name": "奇蹟MU: 經典之戰 - 夢幻騎士降臨",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/13/b3/2b/13b32b1d-5e5b-45d1-a80c-8e5bd05b391d/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "1593523178",
+              "app_name": "奇蹟MU：正宗續作-裁決降世",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/65/e5/b2/65e5b25f-cbef-4f58-d2b5-b772efd1ebaa/AppIcon-1x_U007emarketing-0-7-0-85-220-0.png/180x180bb.png"
+            }
+          ],
+          "rank": 86
+        },
+        {
+          "word_id": "47577",
+          "word": "拳皇98",
+          "hints": "4620",
+          "search_no": "129",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1029763991",
+              "app_name": "拳皇98 終極之戰OL",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/79/d7/9a/79d79af0-b6cb-d38c-b7d3-bbb87fe388f8/AppIcon-1x_U007emarketing-0-7-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "958070620",
+              "app_name": "THE KING OF FIGHTERS-i 2012(F)",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple3/v4/6f/b9/0c/6fb90c63-896b-22fe-f77d-e267751bbd0f/pr_source.png/100x100bb.jpg"
+            },
+            {
+              "app_id": "1410648677",
+              "app_name": "拳皇命運-經典SNK正版授權",
+              "icon": "https://is2-ssl.mzstatic.com/image/thumb/Purple126/v4/8c/a3/38/8ca3388c-1566-121d-0cb8-46ed081c8796/AppIcon-0-0-1x_U007emarketing-0-0-0-10-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/100x100bb.jpg"
+            }
+          ],
+          "rank": 87
+        },
+        {
+          "word_id": "31212386",
+          "word": "戰靈",
+          "hints": "4619",
+          "search_no": "162",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "6745178365",
+              "app_name": "戰靈異聞社-道士猛鬼刺激塔防副本玩法開啟",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/d8/09/fe/d809fee8-0985-8dd2-111e-95e6ff2fa67c/AppIcon-0-0-1x_U007epad-0-11-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "6711351494",
+              "app_name": "純白大作戰：音樂美少女的魔法冒險",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/74/5c/b8/745cb890-9372-757b-f1ef-89c9ace21a57/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1634540728",
+              "app_name": "魔靈召喚: 克羅尼柯戰記",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/43/c2/4d/43c24d94-270f-479a-85b7-aaee4c904ce6/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/180x180bb.png"
+            }
+          ],
+          "rank": 88
+        },
+        {
+          "word_id": "31210230",
+          "word": "戰靈m",
+          "hints": "4619",
+          "search_no": "57",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "6503430688",
+              "app_name": "創世紀戰M：阿修羅計畫",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/6e/9f/dd/6e9fdd31-68e8-d4b3-b074-910bd22b4aa0/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "6475022023",
+              "app_name": "萬妖領域",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e6/97/a2/e697a237-76b0-147c-d202-d9046d8c5662/AppIcon-1x_U007emarketing-0-7-0-85-220-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "1148465254",
+              "app_name": "猫耳FM(M站) - 让广播剧流行起来",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/b3/ea/48/b3ea48e2-d39a-1974-8ec2-b2131971403b/AppIcon-0-0-1x_U007emarketing-0-8-0-0-85-220.png/180x180bb.png"
+            }
+          ],
+          "rank": 89
+        },
+        {
+          "word_id": "554132",
+          "word": "魔靈召喚",
+          "hints": "4619",
+          "search_no": "106",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "852912420",
+              "app_name": "魔靈召喚 X TEKKEN 8聯名火熱進行中",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/77/9f/fc/779ffc88-1bb8-abc4-1f91-31b847f92917/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "6476949737",
+              "app_name": "魔靈召喚: 保衛戰",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/fc/f2/42/fcf24216-c8a3-ab3c-199b-133377654b92/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1634540728",
+              "app_name": "魔靈召喚: 克羅尼柯戰記",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/43/c2/4d/43c24d94-270f-479a-85b7-aaee4c904ce6/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/180x180bb.png"
+            }
+          ],
+          "rank": 90
+        },
+        {
+          "word_id": "31466747",
+          "word": "俠客行不行",
+          "hints": "4618",
+          "search_no": "6",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1488573320",
+              "app_name": "俠客行不行",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple124/v4/b5/3e/22/b53e2255-336f-4247-25a2-7c7cd4ed6f35/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-85-220-0.png/100x100bb.jpg"
+            },
+            {
+              "app_id": "1592727105",
+              "app_name": "英雄衝突",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple112/v4/ac/f3/2b/acf32b76-92be-f50b-1074-fdecce7a86f9/AppIcon-0-0-1x_U007emarketing-0-0-0-4-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/100x100bb.jpg"
+            },
+            {
+              "app_id": "1600449636",
+              "app_name": "掛機升級 - 單機文字遊戲",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/6d/f4/2a/6df42aa6-4cd4-728d-fe04-7f0ad7071cbe/AppIcon-1x_U007emarketing-0-8-0-0-sRGB-85-220-0.png/180x180bb.png"
+            }
+          ],
+          "rank": 91
+        },
+        {
+          "word_id": "31256481",
+          "word": "戰雙",
+          "hints": "4618",
+          "search_no": "178",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1505283065",
+              "app_name": "戰雙帕彌什",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/f0/9d/f3/f09df301-f6ac-28ef-9206-99ba1b9ee7ee/AppIcon-1x_U007emarketing-0-7-0-85-220-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "6740856036",
+              "app_name": "百萬神界",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/06/6f/82/066f82d8-4269-4aa1-f213-409913df5eee/AppIcon-0-0-1x_U007epad-0-1-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1642438140",
+              "app_name": "深空之眼",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/57/ad/6b/57ad6b6b-f7ce-ee63-472f-4ac116572a07/AppIcon-1x_U007emarketing-0-7-0-85-220-0.png/180x180bb.png"
+            }
+          ],
+          "rank": 92
+        },
+        {
+          "word_id": "27746747",
+          "word": "放置遊戲",
+          "hints": "4617",
+          "search_no": "228",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "6740856036",
+              "app_name": "百萬神界",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/06/6f/82/066f82d8-4269-4aa1-f213-409913df5eee/AppIcon-0-0-1x_U007epad-0-1-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "6736560227",
+              "app_name": "異世幻想",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/81/ff/64/81ff644f-c801-e2b1-027e-2de1751411ad/AppIcon-1x_U007emarketing-0-11-0-85-220-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "6502433935",
+              "app_name": "LINE Rangers 放置戰爭",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/de/9b/45/de9b456b-723f-77a1-e8cf-a4699c33673f/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            }
+          ],
+          "rank": 93
+        },
+        {
+          "word_id": "5828912",
+          "word": "rpg遊戲",
+          "hints": "4617",
+          "search_no": "238",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "6736560227",
+              "app_name": "異世幻想",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/81/ff/64/81ff644f-c801-e2b1-027e-2de1751411ad/AppIcon-1x_U007emarketing-0-11-0-85-220-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "1552671461",
+              "app_name": "天地劫",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/ff/a6/0a/ffa60afd-d163-48ea-07d5-9962547d576e/AppIcon-1x_U007emarketing-0-9-0-85-220-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "6499072032",
+              "app_name": "三國啊三國2-經典單機回合RPG遊戲",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a0/12/a1/a012a1c4-0f86-ad70-d571-7a97550d7b20/AppIcon-0-0-1x_U007emarketing-0-6-0-85-220.png/180x180bb.png"
+            }
+          ],
+          "rank": 94
+        },
+        {
+          "word_id": "5652702",
+          "word": "後宮",
+          "hints": "4617",
+          "search_no": "137",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1410647653",
+              "app_name": "女帝的後宮",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/f6/40/9d/f6409d52-1c2f-da03-fadd-42baf35dbbf5/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1491705532",
+              "app_name": "花舞宮廷",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/c1/e2/16/c1e2166f-2994-8396-395c-90b09a8451f9/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1605935374",
+              "app_name": "Dokific多趣遊戲",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e6/40/e8/e640e8f1-3901-9b2c-f407-516d4202405e/AppIcon-0-0-1x_U007emarketing-0-7-0-0-85-220.png/180x180bb.png"
+            }
+          ],
+          "rank": 95
+        },
+        {
+          "word_id": "873696",
+          "word": "碧藍",
+          "hints": "4617",
+          "search_no": "178",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1479022429",
+              "app_name": "碧藍航線",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/11/6a/1d/116a1d8d-a70b-5c2b-48d2-004411436402/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1571873795",
+              "app_name": "蔚藍檔案",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/29/4a/b3/294ab366-6b78-e111-8f28-e69847551115/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "6740856036",
+              "app_name": "百萬神界",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/06/6f/82/066f82d8-4269-4aa1-f213-409913df5eee/AppIcon-0-0-1x_U007epad-0-1-85-220.png/180x180bb.png"
+            }
+          ],
+          "rank": 96
+        },
+        {
+          "word_id": "26978996",
+          "word": "天命之子",
+          "hints": "4616",
+          "search_no": "33",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1416959016",
+              "app_name": "Destiny Child",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/78/5e/e3/785ee3f5-aaf1-cb9c-1e17-c1139a85b90a/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/100x100bb.jpg"
+            },
+            {
+              "app_id": "6450099588",
+              "app_name": "棕色塵埃2- 冒汗心跳的RPG",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/f0/7a/48/f07a486d-523a-8b5c-8588-4869cd8c459c/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "6446244975",
+              "app_name": "Echocalypse: Scarlet Covenant",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/14/1a/38/141a387f-a5c8-0007-6e8d-20eb16af7cfe/GameIcon-1x_U007emarketing-0-8-0-85-220-0.png/180x180bb.png"
+            }
+          ],
+          "rank": 97
+        },
+        {
+          "word_id": "884779",
+          "word": "三國群英傳",
+          "hints": "4616",
+          "search_no": "173",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1455819770",
+              "app_name": "三國群英傳M",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/d3/0d/2f/d30d2faf-0c9b-e73b-0ee1-ea860941ea8f/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1215213697",
+              "app_name": "三國群英傳-霸王之業",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/22/b3/c1/22b3c10a-967d-1677-e9ba-c8d1b0848b51/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "6499072032",
+              "app_name": "三國啊三國2-經典單機回合RPG遊戲",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a0/12/a1/a012a1c4-0f86-ad70-d571-7a97550d7b20/AppIcon-0-0-1x_U007emarketing-0-6-0-85-220.png/180x180bb.png"
+            }
+          ],
+          "rank": 98
+        },
+        {
+          "word_id": "32877515",
+          "word": "熱血江湖M",
+          "hints": "4615",
+          "search_no": "91",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1530891264",
+              "app_name": "新熱血江湖Ｍ",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/3e/0f/4e/3e0f4e8f-3925-232c-6932-6ef19d012870/AppIcon-1x_U007emarketing-0-7-0-85-220-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "6474542782",
+              "app_name": "熱血江湖: 歸來 - 舊江湖，新熱血",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/e6/6f/85/e66f8551-20c2-6d12-830e-8c70800984f6/AppIcon-0-0-1x_U007emarketing-0-7-0-0-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1262289727",
+              "app_name": "熱血江湖手遊",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/9c/35/7a/9c357a1c-f872-887c-533a-dd24721240f4/AppIcon-1x_U007emarketing-0-7-0-0-85-220.png/100x100bb.jpg"
+            }
+          ],
+          "rank": 99
+        },
+        {
+          "word_id": "31760308",
+          "word": "戰雙帕彌什",
+          "hints": "4615",
+          "search_no": "61",
+          "hints_change": 0,
+          "app_list": [
+            {
+              "app_id": "1505283065",
+              "app_name": "戰雙帕彌什",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/f0/9d/f3/f09df301-f6ac-28ef-9206-99ba1b9ee7ee/AppIcon-1x_U007emarketing-0-7-0-85-220-0.png/180x180bb.png"
+            },
+            {
+              "app_id": "6740856036",
+              "app_name": "百萬神界",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/06/6f/82/066f82d8-4269-4aa1-f213-409913df5eee/AppIcon-0-0-1x_U007epad-0-1-85-220.png/180x180bb.png"
+            },
+            {
+              "app_id": "1642438140",
+              "app_name": "深空之眼",
+              "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/57/ad/6b/57ad6b6b-f7ce-ee63-472f-4ac116572a07/AppIcon-1x_U007emarketing-0-7-0-85-220-0.png/180x180bb.png"
+            }
+          ],
+          "rank": 100
+        }
+      ],
+      "maxPage": 168,
+      "is_logout": 0
+    }
+  }
+}

@@ -1,0 +1,421 @@
+name: 关键词文章标题处理工作流
+
+on:
+  # 定时触发（每天北京时间0点）
+  # schedule:
+  # - cron: '0 16 * * *'
+  
+  # 手动触发（用于测试）
+  workflow_dispatch:
+    inputs:
+      max_process_count:
+        description: '最大处理关键词数量（留空表示处理所有）'
+        required: false
+        type: string
+      max_rank_count:
+        description: '最大处理排行数量（前N名，留空表示使用默认值，最大10000）'
+        required: false
+        type: string
+      force_restart:
+        description: '强制重新开始处理'
+        required: false
+        default: false
+        type: boolean
+
+jobs:
+  process-keywords:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120  # 2小时超时
+    
+    steps:
+    - name: 检出代码
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GH_PAT || github.token }}
+      
+    - name: 设置Python环境
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.12'
+        
+    - name: 安装依赖
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        
+    - name: 创建配置文件
+      run: |
+        # 只有在config.json不存在时才创建配置文件
+        if [ ! -f "config.json" ]; then
+          echo "config.json不存在，正在创建配置文件..."
+          cat > config.json << EOF
+        {
+          "default_platform": "groq",
+          "platforms": {
+            "groq": {
+              "name": "Groq",
+              "base_url": "https://api.groq.com/openai/v1/chat/completions",
+              "proxy_url": "https://m3u8-player.5yxy5.com/api/forward/https://api.groq.com/openai/v1/chat/completions",
+              "models": {
+                "default": "deepseek-r1-distill-llama-70b",
+                "available": [
+                  "deepseek-r1-distill-llama-70b",
+                  "llama-3.1-70b-versatile",
+                  "llama-3.1-8b-instant",
+                  "mixtral-8x7b-32768"
+                ]
+              },
+              "api_keys": [
+                "${{ secrets.GROQ_API_KEY_1 }}",
+                "${{ secrets.GROQ_API_KEY_2 }}",
+                "${{ secrets.GROQ_API_KEY_3 }}",
+                "${{ secrets.GROQ_API_KEY_4 }}",
+                "${{ secrets.GROQ_API_KEY_5 }}",
+                "${{ secrets.GROQ_API_KEY_6 }}"
+              ],
+              "headers": {
+                "Content-Type": "application/json"
+              },
+              "auth_type": "bearer",
+              "timeout": 60,
+              "max_retries": 20
+            },
+            "openai": {
+              "name": "OpenAI",
+              "base_url": "https://api.openai.com/v1/chat/completions",
+              "proxy_url": "https://m3u8-player.5yxy5.com/api/forward/https://api.openai.com/v1/chat/completions",
+              "models": {
+                "default": "gpt-3.5-turbo",
+                "available": [
+                  "gpt-3.5-turbo",
+                  "gpt-3.5-turbo-16k",
+                  "gpt-4",
+                  "gpt-4-turbo",
+                  "gpt-4o",
+                  "gpt-4o-mini"
+                ]
+              },
+              "api_keys": [
+                "${{ secrets.OPENAI_API_KEY }}"
+              ],
+              "headers": {
+                "Content-Type": "application/json"
+              },
+              "auth_type": "bearer",
+              "timeout": 60,
+              "max_retries": 20
+            },
+            "gemini": {
+              "name": "Google Gemini",
+              "base_url": "https://generativelanguage.googleapis.com/v1beta/models",
+              "proxy_url": "https://m3u8-player.5yxy5.com/api/forward/https://generativelanguage.googleapis.com/v1beta/models",
+              "models": {
+                "default": "gemini-1.5-flash",
+                "available": [
+                  "gemini-1.5-flash",
+                  "gemini-1.5-pro",
+                  "gemini-1.0-pro"
+                ]
+              },
+              "api_keys": [
+                "${{ secrets.GEMINI_API_KEY }}"
+              ],
+              "headers": {
+                "Content-Type": "application/json"
+              },
+              "auth_type": "api_key",
+              "timeout": 60,
+              "max_retries": 20
+            },
+            "claude": {
+              "name": "Anthropic Claude",
+              "base_url": "https://api.anthropic.com/v1/messages",
+              "proxy_url": "https://m3u8-player.5yxy5.com/api/forward/https://api.anthropic.com/v1/messages",
+              "models": {
+                "default": "claude-3-sonnet-20240229",
+                "available": [
+                  "claude-3-sonnet-20240229",
+                  "claude-3-opus-20240229",
+                  "claude-3-haiku-20240307"
+                ]
+              },
+              "api_keys": [
+                "${{ secrets.CLAUDE_API_KEY }}"
+              ],
+              "headers": {
+                "Content-Type": "application/json",
+                "anthropic-version": "2023-06-01"
+              },
+              "auth_type": "x-api-key",
+              "timeout": 60,
+              "max_retries": 20
+            }
+          },
+          "settings": {
+            "use_proxy": true,
+            "temperature": 0.6,
+            "max_tokens": 10000,
+            "top_p": 0.95,
+            "stream": false
+          },
+          "kv_storage": {
+            "account_id": "${{ secrets.CLOUDFLARE_ACCOUNT_ID }}",
+            "namespace_id": "${{ secrets.CLOUDFLARE_NAMESPACE_ID }}",
+            "api_token": "${{ secrets.CLOUDFLARE_API_TOKEN }}"
+          },
+          "prompts": {
+            "zh-cn": {
+              "name": "简体中文提示词",
+              "template": "${{ secrets.ZH_CN_PROMPT_TEMPLATE }}"
+            },
+            "zh-tw": {
+              "name": "繁體中文提示詞",
+              "template": "${{ secrets.ZH_TW_PROMPT_TEMPLATE }}"
+            }
+          },
+          "google_seo_article_title_prompt": {
+            "zh-cn": {
+              "name": "简体中文提示词",
+              "template": "${{ secrets.GOOGLE_SEO_ARTICLE_TITLE_PROMPT_ZH_CN }}"
+            },
+            "zh-tw": {
+              "name": "繁體中文提示詞",
+              "template": "${{ secrets.GOOGLE_SEO_ARTICLE_TITLE_PROMPT_ZH_TW }}"
+            }
+          }
+        }
+        EOF
+        else
+          echo "config.json已存在，跳过创建配置文件"
+        fi
+        
+    - name: 运行关键词处理脚本
+      id: process-keywords
+      run: |
+        # 设置环境变量
+        export PYTHONUNBUFFERED=1
+        
+        # 获取处理参数
+        MAX_PROCESS_COUNT="${{ github.event.inputs.max_process_count }}"
+        MAX_RANK_COUNT="${{ github.event.inputs.max_rank_count }}"
+        
+        echo "开始处理关键词文章标题..."
+        echo "最大处理关键词数量: ${MAX_PROCESS_COUNT:-'无限制'}"
+        echo "最大处理排行数量: ${MAX_RANK_COUNT:-'使用默认值'}"
+        echo "触发方式: ${{ github.event_name }}"
+        echo "运行时间: $(date)"
+        
+        # 构建命令参数
+        CMD_ARGS=""
+        
+        if [ -n "$MAX_PROCESS_COUNT" ]; then
+          CMD_ARGS="$CMD_ARGS --max-count $MAX_PROCESS_COUNT"
+        fi
+        
+        if [ -n "$MAX_RANK_COUNT" ]; then
+          CMD_ARGS="$CMD_ARGS --max-rank $MAX_RANK_COUNT"
+        fi
+        
+        # 运行关键词处理脚本
+        python -c "
+        import sys
+        sys.path.append('.')
+        
+        # 导入必要的模块
+        from process_keywords import process_keywords
+        import json
+        from datetime import datetime
+        
+        try:
+            # 解析参数
+            max_count = None
+            max_rank = None
+            force_restart = '${{ github.event.inputs.force_restart }}' == 'true'
+            
+            # 检查是否有MAX_PROCESS_COUNT值
+            max_process_str = '$MAX_PROCESS_COUNT'
+            if max_process_str and max_process_str.strip():
+                try:
+                    max_count = int(max_process_str)
+                    print(f'解析到 max_count: {max_count}')
+                except ValueError:
+                    print(f'警告: 无法将 {max_process_str} 转换为整数，使用默认值 None')
+            
+            # 检查是否有MAX_RANK_COUNT值
+            max_rank_str = '$MAX_RANK_COUNT'
+            if max_rank_str and max_rank_str.strip():
+                try:
+                    max_rank = int(max_rank_str)
+                    print(f'解析到 max_rank: {max_rank}')
+                except ValueError:
+                    print(f'警告: 无法将 {max_rank_str} 转换为整数，使用默认值 None')
+            
+            # 运行处理脚本
+            result = process_keywords(max_count, max_rank, force_restart)
+            
+            if result is True:
+                print('✅ 关键词处理完成')
+                
+                # 设置成功状态
+                with open('process_result.json', 'w', encoding='utf-8') as f:
+                    json.dump({
+                        'status': 'success',
+                        'timestamp': datetime.now().isoformat(),
+                        'max_process_count': max_count,
+                        'max_rank_count': max_rank,
+                        'force_restart': force_restart
+                    }, f, ensure_ascii=False, indent=2)
+            elif result == 'circuit_breaker':
+                print('🔥 关键词处理触发熔断机制（API服务异常）')
+                
+                # 熔断状态
+                with open('process_result.json', 'w', encoding='utf-8') as f:
+                    json.dump({
+                        'status': 'circuit_breaker',
+                        'message': '关键词处理触发熔断机制，API服务异常，需要等待后重试',
+                        'timestamp': datetime.now().isoformat(),
+                        'max_process_count': max_count,
+                        'max_rank_count': max_rank,
+                        'force_restart': force_restart
+                    }, f, ensure_ascii=False, indent=2)
+            else:
+                print('⚠️ 关键词处理异常终止（KV存储失败或其他问题）')
+                
+                # 设置警告状态，但不抛出异常
+                with open('process_result.json', 'w', encoding='utf-8') as f:
+                    json.dump({
+                        'status': 'warning',
+                        'message': '处理异常终止，已保存当前进度',
+                        'timestamp': datetime.now().isoformat(),
+                        'max_process_count': max_count,
+                        'max_rank_count': max_rank,
+                        'force_restart': force_restart
+                    }, f, ensure_ascii=False, indent=2)
+                
+        except Exception as e:
+            print(f'❌ 关键词处理失败: {str(e)}')
+            
+            # 设置失败状态
+            with open('process_result.json', 'w', encoding='utf-8') as f:
+                json.dump({
+                    'status': 'error',
+                    'error': str(e),
+                    'timestamp': datetime.now().isoformat(),
+                    'max_process_count': max_count,
+                    'max_rank_count': max_rank,
+                    'force_restart': force_restart
+                }, f, ensure_ascii=False, indent=2)
+            
+            # 重新抛出异常以触发重试
+            raise
+        "
+        
+    - name: 检查处理结果
+      id: check-result
+      if: always()
+      run: |
+        if [ -f "process_result.json" ]; then
+          STATUS=$(python -c "import json; data=json.load(open('process_result.json')); print(data['status'])")
+          echo "处理状态: $STATUS"
+          echo "status=$STATUS" >> $GITHUB_OUTPUT
+          
+          if [ "$STATUS" = "error" ]; then
+            ERROR_MSG=$(python -c "import json; data=json.load(open('process_result.json')); print(data.get('error', 'Unknown error'))")
+            echo "错误信息: $ERROR_MSG"
+            echo "error_message=$ERROR_MSG" >> $GITHUB_OUTPUT
+          elif [ "$STATUS" = "warning" ]; then
+            WARNING_MSG=$(python -c "import json; data=json.load(open('process_result.json')); print(data.get('message', 'Unknown warning'))")
+            echo "警告信息: $WARNING_MSG"
+            echo "error_message=$WARNING_MSG" >> $GITHUB_OUTPUT
+          elif [ "$STATUS" = "circuit_breaker" ]; then
+            CIRCUIT_MSG=$(python -c "import json; data=json.load(open('process_result.json')); print(data.get('message', 'Circuit breaker triggered'))")
+            echo "熔断信息: $CIRCUIT_MSG"
+            echo "error_message=$CIRCUIT_MSG" >> $GITHUB_OUTPUT
+          fi
+        else
+          echo "未找到处理结果文件"
+          echo "status=unknown" >> $GITHUB_OUTPUT
+        fi
+        
+    - name: 上传处理日志
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: keyword-process-logs-${{ github.run_number }}
+        path: |
+          process_result.json
+          *.log
+        retention-days: 7
+        
+    - name: 重置为日常运行模式
+      if: steps.check-result.outputs.status == 'success'
+      run: |
+        echo "✅ 处理成功，重置工作流为日常运行模式..."
+        python update_workflow_schedule.py --type daily
+        
+        # 提交工作流文件更改
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add .github/workflows/process-keywords.yml
+        if git diff --staged --quiet; then
+          echo "📝 工作流文件未更改"
+        else
+          git commit -m "自动重置工作流为日常运行模式 (每天北京时间1点)"
+          git push
+          echo "📝 已提交工作流文件更改"
+        fi
+        
+    - name: 发送成功通知
+      if: steps.check-result.outputs.status == 'success'
+      run: |
+        echo "🎉 关键词处理成功完成！"
+        echo "运行编号: ${{ github.run_number }}"
+        echo "完成时间: $(date)"
+        echo "处理关键词数量: ${{ github.event.inputs.max_process_count || '无限制' }}"
+        echo "处理排行数量: ${{ github.event.inputs.max_rank_count || '使用默认值' }}"
+        
+    - name: 调整工作流为重试模式 (普通错误)
+      if: steps.check-result.outputs.status == 'error' || steps.check-result.outputs.status == 'warning'
+      run: |
+        echo "⚠️ 处理失败，调整工作流为重试模式（30分钟后重试）..."
+        python update_workflow_schedule.py --type retry --delay 30
+        
+    - name: 调整工作流为熔断重试模式
+      if: steps.check-result.outputs.status == 'circuit_breaker'
+      run: |
+        echo "🔥 熔断机制触发，调整工作流为熔断重试模式（2小时后重试）..."
+        python update_workflow_schedule.py --type retry --delay 120
+        
+        # 提交工作流文件更改
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add .github/workflows/process-keywords.yml
+        # 添加今天的工作流调度日志文件
+        TODAY_LOG_DIR="logs/$(date +%Y)/$(date +%m)/$(date +%d)"
+        mkdir -p "$TODAY_LOG_DIR"
+        git add "$TODAY_LOG_DIR/workflow_schedule_updates.log" 2>/dev/null || echo "没有找到今天的调度日志文件"
+        if git diff --staged --quiet; then
+          echo "📝 工作流文件未更改"
+        else
+          git commit -m "自动调整工作流为熔断重试模式 (2小时后重试)"
+          git push
+          echo "📝 已提交工作流文件更改"
+        fi
+        
+    - name: 发送失败通知
+      if: steps.check-result.outputs.status == 'error' || steps.check-result.outputs.status == 'warning'
+      run: |
+        echo "❌ 关键词处理失败！"
+        echo "运行编号: ${{ github.run_number }}"
+        echo "失败时间: $(date)"
+        echo "错误信息: ${{ steps.check-result.outputs.error_message }}"
+        echo "🕐 已安排30分钟后重试"
+        
+    - name: 发送熔断通知
+      if: steps.check-result.outputs.status == 'circuit_breaker'
+      run: |
+        echo "🔥 关键词处理触发熔断机制！"
+        echo "运行编号: ${{ github.run_number }}"
+        echo "熔断时间: $(date)"
+        echo "熔断原因: ${{ steps.check-result.outputs.error_message }}"
+        echo "🕐 已安排2小时后重试（等待API服务恢复）"

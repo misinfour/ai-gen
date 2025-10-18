@@ -1,0 +1,67 @@
+name: 关键词处理完成通知
+
+on:
+  workflow_run:
+    workflows: ["关键词文章标题处理工作流", "关键词处理重试工作流"]
+    types: [completed]
+
+jobs:
+  notify-completion:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion != 'skipped' }}
+    
+    steps:
+    - name: 检查工作流结果
+      id: check-workflow
+      run: |
+        WORKFLOW_NAME="${{ github.event.workflow_run.name }}"
+        CONCLUSION="${{ github.event.workflow_run.conclusion }}"
+        RUN_ID="${{ github.event.workflow_run.id }}"
+        
+        echo "工作流名称: $WORKFLOW_NAME"
+        echo "执行结果: $CONCLUSION"
+        echo "运行ID: $RUN_ID"
+        
+        echo "workflow_name=$WORKFLOW_NAME" >> $GITHUB_OUTPUT
+        echo "conclusion=$CONCLUSION" >> $GITHUB_OUTPUT
+        echo "run_id=$RUN_ID" >> $GITHUB_OUTPUT
+        
+    - name: 发送成功通知
+      if: steps.check-workflow.outputs.conclusion == 'success'
+      run: |
+        echo "🎉 关键词处理工作流执行成功！"
+        echo "工作流: ${{ steps.check-workflow.outputs.workflow_name }}"
+        echo "运行ID: ${{ steps.check-workflow.outputs.run_id }}"
+        echo "完成时间: $(date)"
+        
+        # 这里可以添加更多通知方式，比如：
+        # - 发送邮件
+        # - 发送Slack消息
+        # - 发送钉钉消息
+        # - 发送微信消息
+        
+    - name: 发送失败通知
+      if: steps.check-workflow.outputs.conclusion == 'failure'
+      run: |
+        echo "❌ 关键词处理工作流执行失败！"
+        echo "工作流: ${{ steps.check-workflow.outputs.workflow_name }}"
+        echo "运行ID: ${{ steps.check-workflow.outputs.run_id }}"
+        echo "失败时间: $(date)"
+        
+        # 这里可以添加更多通知方式
+        
+    - name: 发送取消通知
+      if: steps.check-workflow.outputs.conclusion == 'cancelled'
+      run: |
+        echo "⚠️ 关键词处理工作流被取消！"
+        echo "工作流: ${{ steps.check-workflow.outputs.workflow_name }}"
+        echo "运行ID: ${{ steps.check-workflow.outputs.run_id }}"
+        echo "取消时间: $(date)"
+        
+    - name: 发送超时通知
+      if: steps.check-workflow.outputs.conclusion == 'timed_out'
+      run: |
+        echo "⏰ 关键词处理工作流执行超时！"
+        echo "工作流: ${{ steps.check-workflow.outputs.workflow_name }}"
+        echo "运行ID: ${{ steps.check-workflow.outputs.run_id }}"
+        echo "超时时间: $(date)"

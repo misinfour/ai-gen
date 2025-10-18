@@ -1,0 +1,310 @@
+name: AI文章生成器工作流
+
+on:
+  # 仅手动触发
+  workflow_dispatch:
+    inputs:
+      keywords:
+        description: '文章关键词（每行一个，格式：关键词----自定义尾词----游戏名）'
+        required: true
+        default: '一念逍遥零氪玩家玩什么职业----无限钻石版----一念逍遥'
+        type: string
+      platform:
+        description: 'AI平台选择'
+        required: false
+        default: 'groq'
+        type: choice
+        options:
+          - groq
+          - openai
+          - gemini
+          - claude
+      need_images:
+        description: '是否需要下载图片'
+        required: false
+        default: true
+        type: boolean
+      language:
+        description: '生成语言'
+        required: false
+        default: 'both'
+        type: choice
+        options:
+          - both
+          - zh-cn
+          - zh-tw
+
+  # # 定时触发（每天上午9点）
+  # schedule:
+  #   - cron: '0 9 * * *'
+
+  # # 推送到main分支时触发
+  # push:
+  #   branches: [ main ]
+  #   paths:
+  #     - '长尾词.txt'
+  #     - 'aigen.py'
+  #     - 'config.json'
+
+jobs:
+  generate-articles:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    
+    steps:
+    - name: 检出代码
+      uses: actions/checkout@v4
+      
+    - name: 设置Python环境
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.12'
+        
+    - name: 安装依赖
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        
+    - name: 创建配置文件
+      run: |
+        # 只有在config.json不存在时才创建配置文件
+        if [ ! -f "config.json" ]; then
+          echo "config.json不存在，正在创建配置文件..."
+          cat > config.json << EOF
+        {
+          "default_platform": "${{ github.event.inputs.platform || 'groq' }}",
+          "platforms": {
+            "groq": {
+              "name": "Groq",
+              "base_url": "https://api.groq.com/openai/v1/chat/completions",
+              "proxy_url": "https://m3u8-player.5yxy5.com/api/forward/https://api.groq.com/openai/v1/chat/completions",
+              "models": {
+                "default": "deepseek-r1-distill-llama-70b",
+                "available": [
+                  "deepseek-r1-distill-llama-70b",
+                  "llama-3.1-70b-versatile",
+                  "llama-3.1-8b-instant",
+                  "mixtral-8x7b-32768"
+                ]
+              },
+              "api_keys": [
+                "${{ secrets.GROQ_API_KEY_1 }}",
+                "${{ secrets.GROQ_API_KEY_2 }}",
+                "${{ secrets.GROQ_API_KEY_3 }}",
+                "${{ secrets.GROQ_API_KEY_4 }}",
+                "${{ secrets.GROQ_API_KEY_5 }}",
+                "${{ secrets.GROQ_API_KEY_6 }}"
+              ],
+              "headers": {
+                "Content-Type": "application/json"
+              },
+              "auth_type": "bearer",
+              "timeout": 60,
+              "max_retries": 20
+            },
+            "openai": {
+              "name": "OpenAI",
+              "base_url": "https://api.openai.com/v1/chat/completions",
+              "proxy_url": "https://m3u8-player.5yxy5.com/api/forward/https://api.openai.com/v1/chat/completions",
+              "models": {
+                "default": "gpt-3.5-turbo",
+                "available": [
+                  "gpt-3.5-turbo",
+                  "gpt-3.5-turbo-16k",
+                  "gpt-4",
+                  "gpt-4-turbo",
+                  "gpt-4o",
+                  "gpt-4o-mini"
+                ]
+              },
+              "api_keys": [
+                "${{ secrets.OPENAI_API_KEY }}"
+              ],
+              "headers": {
+                "Content-Type": "application/json"
+              },
+              "auth_type": "bearer",
+              "timeout": 60,
+              "max_retries": 20
+            },
+            "gemini": {
+              "name": "Google Gemini",
+              "base_url": "https://generativelanguage.googleapis.com/v1beta/models",
+              "proxy_url": "https://m3u8-player.5yxy5.com/api/forward/https://generativelanguage.googleapis.com/v1beta/models",
+              "models": {
+                "default": "gemini-1.5-flash",
+                "available": [
+                  "gemini-1.5-flash",
+                  "gemini-1.5-pro",
+                  "gemini-1.0-pro"
+                ]
+              },
+              "api_keys": [
+                "${{ secrets.GEMINI_API_KEY }}"
+              ],
+              "headers": {
+                "Content-Type": "application/json"
+              },
+              "auth_type": "api_key",
+              "timeout": 60,
+              "max_retries": 20
+            },
+            "claude": {
+              "name": "Anthropic Claude",
+              "base_url": "https://api.anthropic.com/v1/messages",
+              "proxy_url": "https://m3u8-player.5yxy5.com/api/forward/https://api.anthropic.com/v1/messages",
+              "models": {
+                "default": "claude-3-sonnet-20240229",
+                "available": [
+                  "claude-3-sonnet-20240229",
+                  "claude-3-opus-20240229",
+                  "claude-3-haiku-20240307"
+                ]
+              },
+              "api_keys": [
+                "${{ secrets.CLAUDE_API_KEY }}"
+              ],
+              "headers": {
+                "Content-Type": "application/json",
+                "anthropic-version": "2023-06-01"
+              },
+              "auth_type": "x-api-key",
+              "timeout": 60,
+              "max_retries": 20
+            }
+          },
+          "settings": {
+            "use_proxy": true,
+            "temperature": 0.6,
+            "max_tokens": 10000,
+            "top_p": 0.95,
+            "stream": false
+          },
+          "prompts": {
+            "zh-cn": {
+              "name": "简体中文提示词",
+              "template": "${{ secrets.ZH_CN_PROMPT_TEMPLATE }}"
+            },
+            "zh-tw": {
+              "name": "繁體中文提示詞",
+              "template": "${{ secrets.ZH_TW_PROMPT_TEMPLATE }}"
+            }
+          }
+        }
+        EOF
+        else
+          echo "config.json已存在，跳过创建配置文件"
+        fi
+        
+    - name: 创建关键词输入文件
+      run: |
+        # 创建临时输入文件
+        echo "${{ github.event.inputs.keywords || '一念逍遥零氪玩家玩什么职业----无限钻石版----一念逍遥' }}" > temp_keywords.txt
+        
+    - name: 运行AI文章生成器
+      run: |
+        # 设置环境变量
+        export PYTHONUNBUFFERED=1
+        
+        # 运行文章生成器（非交互模式）
+        python -c "
+        import sys
+        sys.path.append('.')
+        
+        # 导入必要的模块
+        from aigen import initialize_managers, process_all_articles, LANGUAGES
+        from config_manager import ConfigManager
+        from api_manager import MultiPlatformApiManager
+        import time
+        
+        # 初始化配置和API管理器
+        config_manager, api_manager = initialize_managers()
+        
+        # 设置平台
+        platform = '${{ github.event.inputs.platform || 'groq' }}'
+        api_manager.set_platform(platform)
+        
+        # 读取关键词
+        with open('temp_keywords.txt', 'r', encoding='utf-8') as f:
+            keywords_input = f.read().strip()
+        
+        # 解析关键词
+        keywords = [line.strip() for line in keywords_input.split('\n') if line.strip()]
+        
+        # 准备用户输入
+        need_images_str = '${{ github.event.inputs.need_images || 'true' }}'
+        need_images = need_images_str.lower() == 'true'
+        
+        user_inputs = {
+            'keywords': keywords,
+            'prompt_template': config_manager.get_prompt_template('zh-cn'),
+            'need_images': need_images,
+            'selected_platform': platform
+        }
+        
+        print(f'开始生成 {len(keywords)} 篇文章...')
+        print(f'使用平台: {platform}')
+        print(f'需要图片: {user_inputs[\"need_images\"]}')
+        
+        # 处理所有文章
+        results = process_all_articles(user_inputs)
+        
+        # 输出结果
+        print('\\n===== 生成结果汇总 =====')
+        success_count = sum(1 for r in results if r['status'] == '成功')
+        fail_count = len(results) - success_count
+        
+        print(f'成功生成: {success_count} 篇')
+        print(f'失败: {fail_count} 篇')
+        
+        # 显示API使用统计
+        api_manager.show_usage_stats()
+        "
+        
+    - name: 上传生成的文章
+      uses: actions/upload-artifact@v4
+      with:
+        name: generated-articles-${{ github.run_number }}
+        path: assets/
+        retention-days: 30
+        
+    - name: 上传错误日志
+      uses: actions/upload-artifact@v4
+      if: failure()
+      with:
+        name: error-logs-${{ github.run_number }}
+        path: assets/error_log.txt
+        retention-days: 7
+        
+    - name: 提交生成的文章到仓库
+      if: success()
+      run: |
+        # 配置Git用户信息
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        
+        # 添加生成的文章
+        git add assets/
+        
+        # 检查是否有变更
+        if git diff --staged --quiet; then
+          echo "没有新的文章生成"
+        else
+          # 提交变更
+          git commit -m "🤖 自动生成文章 - 工作流 #${{ github.run_number }} [skip ci]"
+          
+          # 推送到仓库
+          git push
+          
+          echo "✅ 文章已成功提交到仓库"
+        fi
+        
+    - name: 发送通知
+      if: always()
+      run: |
+        echo "工作流执行完成"
+        echo "运行编号: ${{ github.run_number }}"
+        echo "触发方式: ${{ github.event_name }}"
+        echo "提交哈希: ${{ github.sha }}"
