@@ -657,7 +657,7 @@ jobs:
         fi
         
     - name: 处理失败 - 更新工作流为重试模式并推送
-      if: always() && (steps.check-result.outputs.status == 'error' || steps.check-result.outputs.status == 'circuit_breaker' || steps.check-result.outputs.status == 'unknown' || steps.generate-task.outcome == 'failure')
+      if: always() && (steps.check-result.outputs.status == 'error' || steps.check-result.outputs.status == 'circuit_breaker' || (steps.check-result.outputs.status == 'unknown' && steps.generate-task.outcome == 'failure'))
       run: |
         echo "⚠️ 文章生成任务执行失败！"
         echo "🔄 调整工作流为重试模式（30分钟后重试）..."
@@ -704,14 +704,6 @@ jobs:
         fi
         
         echo "✅ 重试模式设置完成"
-        
-    - name: 调试状态信息
-      if: always()
-      run: |
-        echo "🔍 调试状态信息："
-        echo "check-result.status: ${{ steps.check-result.outputs.status }}"
-        echo "generate-task.outcome: ${{ steps.generate-task.outcome }}"
-        echo "check-result.outputs: ${{ toJson(steps.check-result.outputs) }}"
         
     - name: 发送成功通知
       if: steps.check-result.outputs.status == 'success'
