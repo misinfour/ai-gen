@@ -4,7 +4,7 @@ on:
   schedule:
     # 每天北京时间1点执行 (UTC时间17点)
     # 每日发布模式：随机分配文章到各个网站
-    - cron: '5 9 19 10 *'
+    - cron: '8 9 19 10 *'
   workflow_dispatch:
     inputs:
       need_images:
