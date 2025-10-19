@@ -656,21 +656,11 @@ jobs:
           done
         fi
         
-    - name: 处理失败 - 更新工作流为重试模式
+    - name: 处理失败 - 更新工作流为重试模式并推送
       if: (steps.check-result.outputs.status == 'error' || steps.check-result.outputs.status == 'circuit_breaker' || steps.check-result.outputs.status == 'unknown') && steps.generate-task.outcome == 'failure'
       run: |
         echo "⚠️ 文章生成任务执行失败！"
         echo "🔄 调整工作流为重试模式（30分钟后重试）..."
-        
-        # 运行脚本更新工作流文件（但不推送）
-        python update_workflow_schedule.py --type retry --delay 30 --workflow generate-articles --no-push
-        
-        echo "✅ 工作流文件已更新，将在下一步推送"
-
-    - name: 推送工作流文件更改
-      if: (steps.check-result.outputs.status == 'error' || steps.check-result.outputs.status == 'circuit_breaker' || steps.check-result.outputs.status == 'unknown') && steps.generate-task.outcome == 'failure'
-      run: |
-        echo "📤 推送工作流文件更改..."
         
         # 配置Git用户信息
         git config user.name "github-actions"
@@ -684,12 +674,16 @@ jobs:
           git reset --hard origin/main
         }
         
+        # 运行脚本更新工作流文件
+        echo "🔧 更新工作流文件为重试模式..."
+        python update_workflow_schedule.py --type retry --delay 30 --workflow generate-articles --no-push
+        
         # 添加工作流文件
         git add .github/workflows/generate-articles.yml
         
         # 检查是否有变更
         if git diff --staged --quiet; then
-          echo "📝 工作流文件未更改"
+          echo "📝 工作流文件未更改，可能已经是最新状态"
         else
           # 提交变更
           git commit -m "自动调整工作流为重试模式 (30分钟后重试)"
@@ -708,6 +702,8 @@ jobs:
             fi
           done
         fi
+        
+        echo "✅ 重试模式设置完成"
         
     - name: 发送成功通知
       if: steps.check-result.outputs.status == 'success'
@@ -744,65 +740,19 @@ jobs:
           echo "🕐 已安排30分钟后重试"
         fi
 
-    - name: 处理超时 - 设置30分钟后重置
+    - name: 处理取消 - 不重试
       if: cancelled()
       run: |
-        echo "⏰ 工作流执行超时！"
-        echo "🔄 设置工作流为30分钟后重置..."
-        
-        # 运行脚本设置工作流为重试模式（30分钟后重置）
-        python update_workflow_schedule.py --type retry --delay 30 --workflow generate-articles --no-push
-        
-        echo "✅ 工作流已设置为30分钟后重置"
-
-    - name: 推送超时重置的工作流文件
-      if: cancelled()
-      run: |
-        echo "📤 推送超时重置的工作流文件..."
-        
-        # 配置Git用户信息
-        git config user.name "github-actions"
-        git config user.email "github-actions@users.noreply.github.com"
-        
-        # 先拉取远程更改，避免推送冲突
-        echo "🔄 拉取远程更改..."
-        git pull origin main --no-edit || {
-          echo "⚠️ 拉取失败，尝试强制拉取..."
-          git fetch origin main
-          git reset --hard origin/main
-        }
-        
-        # 添加工作流文件
-        git add .github/workflows/generate-articles.yml
-        
-        # 检查是否有变更
-        if git diff --staged --quiet; then
-          echo "📝 工作流文件未更改"
-        else
-          # 提交变更
-          git commit -m "工作流超时自动设置为30分钟后重置"
-          
-          # 推送到仓库，使用重试机制
-          echo "📤 推送工作流文件到仓库..."
-          for i in {1..3}; do
-            if git push https://${{ secrets.USERNAME }}:${{ secrets.GH_PAT }}@github.com/${{ github.repository }}.git HEAD:main; then
-              echo "✅ 工作流文件已成功推送"
-              break
-            else
-              echo "⚠️ 推送失败，尝试第 $i 次重试..."
-              sleep 5
-              # 重新拉取并合并
-              git pull origin main --no-edit || git reset --hard origin/main
-            fi
-          done
-        fi
-
-    - name: 发送超时通知
-      if: cancelled()
-      run: |
-        echo "⏰ 工作流执行超时！"
+        echo "⏰ 工作流被手动取消！"
         echo "运行编号: ${{ github.run_number }}"
-        echo "超时时间: $(date)"
-        echo "超时限制: 300分钟"
-        echo "🕐 已安排30分钟后重置"
+        echo "取消时间: $(date)"
+        echo "⚠️ 手动取消不会触发重试，工作流将保持当前状态"
+
+    - name: 发送取消通知
+      if: cancelled()
+      run: |
+        echo "⏰ 工作流被手动取消！"
+        echo "运行编号: ${{ github.run_number }}"
+        echo "取消时间: $(date)"
+        echo "⚠️ 手动取消不会触发重试"
 
