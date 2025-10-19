@@ -357,6 +357,9 @@ jobs:
                         'need_images': need_images_bool,
                         'articles_per_site': articles_per_site_int
                     }, f, ensure_ascii=False, indent=2)
+                
+                # 抛出异常以触发重试模式
+                raise Exception('文章生成触发熔断机制，需要等待后重试')
             else:
                 print('⚠️ 文章生成失败')
                 
