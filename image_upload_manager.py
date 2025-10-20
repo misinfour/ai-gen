@@ -208,6 +208,169 @@ class ImageUploadManager:
                 'upload_time': datetime.now(beijing_tz).isoformat()
             }
     
+    def batch_upload_articles_images(self, articles_data, repo_id, is_final_commit=False):
+        """批量上传多篇文章的图片到图床仓库"""
+        try:
+            image_repo_config = self.get_image_repo_config(repo_id)
+            if not image_repo_config:
+                return {
+                    'success': False,
+                    'error': f'仓库 {repo_id} 没有配置图床仓库或图床仓库未启用'
+                }
+            
+            repo_url = image_repo_config['url']
+            branch = image_repo_config.get('branch', 'main')
+            auth_token = image_repo_config['auth']['token']
+            domain = image_repo_config.get('domain', '')
+            
+            # 收集所有文章的图片文件
+            all_uploaded_images = {}
+            total_images = 0
+            
+            # 创建临时目录
+            with tempfile.TemporaryDirectory() as temp_dir:
+                temp_path = Path(temp_dir)
+                repo_path = temp_path / "repo"
+                
+                # 克隆图床仓库
+                clone_url = repo_url.replace('https://', f'https://{auth_token}@')
+                subprocess.run([
+                    'git', 'clone', '--branch', branch, clone_url, str(repo_path)
+                ], check=True, capture_output=True)
+                
+                # 配置Git用户身份
+                subprocess.run([
+                    'git', 'config', 'user.email', 'ai-generator@github.com'
+                ], cwd=repo_path, check=True)
+                subprocess.run([
+                    'git', 'config', 'user.name', 'Action'
+                ], cwd=repo_path, check=True)
+                
+                # 处理每篇文章的图片
+                for article_data in articles_data:
+                    article_path = Path(article_data['original_path'])
+                    article_info = article_data['article_data']
+                    images_dir = article_path / "images"
+                    
+                    if not images_dir.exists():
+                        print(f"      ⚠️  文章 {article_info['folder_name']} 没有图片")
+                        continue
+                    
+                    # 收集图片文件
+                    image_files = []
+                    for ext in ['*.jpg', '*.jpeg', '*.png', '*.gif', '*.webp']:
+                        image_files.extend(images_dir.glob(ext))
+                    
+                    if not image_files:
+                        print(f"      ⚠️  文章 {article_info['folder_name']} 没有找到图片文件")
+                        continue
+                    
+                    print(f"      📸 处理文章 {article_info['folder_name']} 的 {len(image_files)} 张图片...")
+                    
+                    # 生成目标路径
+                    target_base_path = self.generate_image_target_path(image_repo_config, article_info)
+                    target_path = repo_path / target_base_path
+                    target_path.mkdir(parents=True, exist_ok=True)
+                    
+                    article_uploaded_images = []
+                    
+                    # 上传每个图片文件
+                    for image_file in image_files:
+                        if not image_file.exists():
+                            continue
+                        
+                        # 获取文件名
+                        filename = image_file.name
+                        
+                        # 复制图片到目标目录
+                        target_file = target_path / filename
+                        shutil.copy2(image_file, target_file)
+                        
+                        # 生成远程URL
+                        if domain:
+                            remote_url = f"https://{domain}/{target_base_path}/{filename}"
+                        else:
+                            # 如果没有配置域名，使用GitHub raw URL
+                            repo_name = repo_url.split('/')[-1].replace('.git', '')
+                            owner = repo_url.split('/')[-2]
+                            remote_url = f"https://raw.githubusercontent.com/{owner}/{repo_name}/{branch}/{target_base_path}/{filename}"
+                        
+                        article_uploaded_images.append({
+                            'local_path': str(image_file),
+                            'filename': filename,
+                            'remote_url': remote_url,
+                            'target_path': str(target_file)
+                        })
+                    
+                    if article_uploaded_images:
+                        all_uploaded_images[article_info['folder_name']] = article_uploaded_images
+                        total_images += len(article_uploaded_images)
+                        print(f"      ✅ 文章 {article_info['folder_name']} 图片准备完成: {len(article_uploaded_images)} 张")
+                
+                if not all_uploaded_images:
+                    return {
+                        'success': True,
+                        'repo_id': repo_id,
+                        'repo_name': image_repo_config['name'],
+                        'uploaded_images': {},
+                        'message': '没有图片需要上传'
+                    }
+                
+                # 提交所有更改
+                subprocess.run(['git', 'add', '.'], cwd=repo_path, check=True)
+                
+                # 检查是否有变更需要提交
+                result = subprocess.run(['git', 'status', '--porcelain'], cwd=repo_path, capture_output=True, text=True)
+                if not result.stdout.strip():
+                    return {
+                        'success': True,
+                        'repo_id': repo_id,
+                        'repo_name': image_repo_config['name'],
+                        'uploaded_images': all_uploaded_images,
+                        'message': '没有变更需要提交'
+                    }
+                
+                # 根据是否为最后一次提交生成不同的提交信息
+                if is_final_commit:
+                    commit_message = f"🤖 批量上传图片 {total_images} 张 (共 {len(articles_data)} 篇文章)"
+                    print(f"    🚀 批量图片上传完成，开启自动部署")
+                else:
+                    commit_message = f"🤖 批量上传图片 {total_images} 张 (共 {len(articles_data)} 篇文章) [skip ci]"
+                    print(f"    📝 批量图片上传完成，跳过自动部署")
+                
+                subprocess.run([
+                    'git', 'commit', '-m', commit_message
+                ], cwd=repo_path, check=True)
+                
+                subprocess.run(['git', 'push'], cwd=repo_path, check=True)
+                
+                return {
+                    'success': True,
+                    'repo_id': repo_id,
+                    'repo_name': image_repo_config['name'],
+                    'repo_url': repo_url,
+                    'uploaded_images': all_uploaded_images,
+                    'total_images': total_images,
+                    'articles_count': len(articles_data),
+                    'upload_time': datetime.now(beijing_tz).isoformat()
+                }
+                
+        except subprocess.CalledProcessError as e:
+            error_msg = f"Git命令执行失败: {e.stderr.decode() if e.stderr else str(e)}"
+            return {
+                'success': False,
+                'repo_id': repo_id,
+                'error': error_msg,
+                'upload_time': datetime.now(beijing_tz).isoformat()
+            }
+        except Exception as e:
+            return {
+                'success': False,
+                'repo_id': repo_id,
+                'error': str(e),
+                'upload_time': datetime.now(beijing_tz).isoformat()
+            }
+
     def replace_images_with_remote_urls(self, text, image_mapping):
         """将文章中的图片路径替换为远程URL"""
         if not image_mapping:

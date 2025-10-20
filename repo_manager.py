@@ -220,47 +220,52 @@ class RepositoryManager:
                         print(f"      📄 已添加: {article_data['folder_name']}")
                     
                     # 文章文件复制完成后，统一处理图片上传
-                    print(f"    📸 开始统一处理所有文章的图片上传...")
-                    for uploaded_article in uploaded_articles:
-                        article_path = uploaded_article['original_path']
-                        article_data = uploaded_article['article_data']
-                        
-                        # 处理图片上传到图床（只有最后一次提交才触发自动部署）
-                        print(f"      📸 处理文章图片: {article_data['folder_name']}")
-                        image_result = self.image_upload_manager.process_article_images(
-                            article_path, repo_id, article_data, is_final_commit
-                        )
-                        
-                        if image_result['success'] and image_result.get('uploaded_images'):
-                            print(f"      ✅ 图片已上传到图床: {len(image_result['uploaded_images'])} 张")
+                    print(f"    📸 开始批量处理所有文章的图片上传...")
+                    
+                    # 使用批量图片上传方法
+                    batch_image_result = self.image_upload_manager.batch_upload_articles_images(
+                        uploaded_articles, repo_id, is_final_commit
+                    )
+                    
+                    if batch_image_result['success']:
+                        if batch_image_result.get('uploaded_images'):
+                            print(f"    ✅ 批量图片上传成功: 共 {batch_image_result.get('total_images', 0)} 张图片")
                             
-                            # 更新文章内容中的图片链接
-                            markdown_file = Path(uploaded_article['path']) / "README.md"
-                            if markdown_file.exists():
-                                with open(markdown_file, 'r', encoding='utf-8') as f:
-                                    content = f.read()
+                            # 更新每篇文章内容中的图片链接
+                            for uploaded_article in uploaded_articles:
+                                article_data = uploaded_article['article_data']
+                                folder_name = article_data['folder_name']
                                 
-                                # 替换图片路径为远程URL
-                                updated_content = self.image_upload_manager.replace_images_with_remote_urls(
-                                    content, image_result['uploaded_images']
-                                )
-                                
-                                # 保存更新后的内容
-                                with open(markdown_file, 'w', encoding='utf-8') as f:
-                                    f.write(updated_content)
-                                
-                                print(f"      🔗 已更新文章中的图片链接")
-                            
-                            # 删除本地images文件夹，因为图片已上传到图床
-                            images_dir = Path(uploaded_article['path']) / "images"
-                            if images_dir.exists():
-                                shutil.rmtree(images_dir)
-                                print(f"      🗑️  已删除本地images文件夹")
-                                
-                        elif image_result['success']:
-                            print(f"      ℹ️  文章无图片需要上传")
+                                if folder_name in batch_image_result['uploaded_images']:
+                                    article_images = batch_image_result['uploaded_images'][folder_name]
+                                    print(f"      🔗 更新文章 {folder_name} 的图片链接: {len(article_images)} 张")
+                                    
+                                    # 更新文章内容中的图片链接
+                                    markdown_file = Path(uploaded_article['path']) / "README.md"
+                                    if markdown_file.exists():
+                                        with open(markdown_file, 'r', encoding='utf-8') as f:
+                                            content = f.read()
+                                        
+                                        # 替换图片路径为远程URL
+                                        updated_content = self.image_upload_manager.replace_images_with_remote_urls(
+                                            content, article_images
+                                        )
+                                        
+                                        # 保存更新后的内容
+                                        with open(markdown_file, 'w', encoding='utf-8') as f:
+                                            f.write(updated_content)
+                                        
+                                        print(f"        ✅ 已更新文章中的图片链接")
+                                    
+                                    # 删除本地images文件夹，因为图片已上传到图床
+                                    images_dir = Path(uploaded_article['path']) / "images"
+                                    if images_dir.exists():
+                                        shutil.rmtree(images_dir)
+                                        print(f"        🗑️  已删除本地images文件夹")
                         else:
-                            print(f"      ⚠️  图片上传失败: {image_result.get('error', '未知错误')}")
+                            print(f"    ℹ️  没有图片需要上传")
+                    else:
+                        print(f"    ⚠️  批量图片上传失败: {batch_image_result.get('error', '未知错误')}")
                 
                 else:
                     # 单篇文章上传（修改后的逻辑）
