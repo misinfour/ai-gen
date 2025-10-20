@@ -254,21 +254,7 @@ jobs:
         START_TS=$(date +%s)
         TIMEOUT_MINUTES=120
         # 在接收到终止信号时进行判断：接近超时时认为是超时取消，否则认为是手动取消
-        trap ' \
-          NOW=$(date +%s); \
-          ELAPSED=$(( NOW - START_TS )); \
-          THRESH=$(( TIMEOUT_MINUTES*60 - 300 )); \
-          echo "⚠️ 收到终止信号，已运行 ${ELAPSED}s，阈值 ${THRESH}s"; \
-          if [ "$ELAPSED" -ge "$THRESH" ]; then \
-            echo "⏰ 推测为接近超时导致的取消，标记为需重试"; \
-            printf '{"status":"timeout","timestamp":"%s"}\n' "$(date -Iseconds)" > generate_result.json; \
-            touch .timeout_inferred; \
-          else \
-            echo "🛑 推测为手动取消，不重试"; \
-            printf '{"status":"cancelled","timestamp":"%s"}\n' "$(date -Iseconds)" > generate_result.json; \
-          fi; \
-          exit 1 \
-        ' SIGTERM SIGINT
+        trap 'NOW=$(date +%s); ELAPSED=$(( NOW - START_TS )); THRESH=$(( TIMEOUT_MINUTES*60 - 300 )); echo "⚠️ 收到终止信号，已运行 ${ELAPSED}s，阈值 ${THRESH}s"; if [ "$ELAPSED" -ge "$THRESH" ]; then echo "⏰ 推测为接近超时导致的取消，标记为需重试"; printf "{\"status\":\"timeout\",\"timestamp\":\"%s\"}\n" "$(date -Iseconds)" > generate_result.json; touch .timeout_inferred; else echo "🛑 推测为手动取消，不重试"; printf "{\"status\":\"cancelled\",\"timestamp\":\"%s\"}\n" "$(date -Iseconds)" > generate_result.json; fi; exit 1' SIGTERM SIGINT
         
         # 获取处理参数
         NEED_IMAGES="${{ github.event.inputs.need_images || 'true' }}"
