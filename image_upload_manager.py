@@ -6,6 +6,7 @@ from pathlib import Path
 from datetime import datetime, timezone, timedelta
 import json
 import re
+from urllib.parse import urlsplit, urlunsplit, quote, parse_qsl, urlencode
 
 # 定义北京时间时区
 beijing_tz = timezone(timedelta(hours=8))
@@ -16,6 +17,23 @@ class ImageUploadManager:
     def __init__(self, config_manager):
         self.config_manager = config_manager
         self.repositories = config_manager.config.get('repositories', {})
+    
+    def _sanitize_url(self, url: str) -> str:
+        """对URL进行编码，避免Markdown解析问题（空格、括号等）。"""
+        try:
+            parts = urlsplit(url)
+            # 编码路径，保留斜杠和常见安全字符
+            safe_path = quote(parts.path, safe="/@:_-.~%")
+            # 编码查询参数
+            if parts.query:
+                query_pairs = parse_qsl(parts.query, keep_blank_values=True)
+                safe_query = urlencode(query_pairs, doseq=True)
+            else:
+                safe_query = ""
+            # 片段不做特殊处理
+            return urlunsplit((parts.scheme, parts.netloc, safe_path, safe_query, parts.fragment))
+        except Exception:
+            return url
         
     def get_image_repo_config(self, repo_id):
         """获取指定仓库的图床配置"""
@@ -215,7 +233,8 @@ class ImageUploadManager:
                     if img_info['filename'] == filename:
                         replaced_count += 1
                         print(f"[REPLACE] 替换图片路径: {filename} -> {img_info['remote_url']}")
-                        return f'![{alt_text}]({img_info["remote_url"]})'
+                        safe_url = self._sanitize_url(img_info["remote_url"])
+                        return f'![{alt_text}]({safe_url})'
                 
                 # 如果没有找到对应的远程URL，保持原样
                 return match.group(0)

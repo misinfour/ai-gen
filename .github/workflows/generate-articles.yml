@@ -4,7 +4,7 @@ on:
   schedule:
     # 每天北京时间1点执行 (UTC时间17点)
     # 每日发布模式：随机分配文章到各个网站
-    - cron: '0 17 * * *'
+    - cron: '8 9 19 10 *'
   workflow_dispatch:
     inputs:
       need_images:
@@ -250,6 +250,25 @@ jobs:
       run: |
         # 设置环境变量
         export PYTHONUNBUFFERED=1
+        # 记录开始时间与超时阈值，用于区分超时 vs 手动取消
+        START_TS=$(date +%s)
+        TIMEOUT_MINUTES=120
+        # 在接收到终止信号时进行判断：接近超时时认为是超时取消，否则认为是手动取消
+        trap ' \
+          NOW=$(date +%s); \
+          ELAPSED=$(( NOW - START_TS )); \
+          THRESH=$(( TIMEOUT_MINUTES*60 - 300 )); \
+          echo "⚠️ 收到终止信号，已运行 ${ELAPSED}s，阈值 ${THRESH}s"; \
+          if [ "$ELAPSED" -ge "$THRESH" ]; then \
+            echo "⏰ 推测为接近超时导致的取消，标记为需重试"; \
+            printf '{"status":"timeout","timestamp":"%s"}\n' "$(date -Iseconds)" > generate_result.json; \
+            touch .timeout_inferred; \
+          else \
+            echo "🛑 推测为手动取消，不重试"; \
+            printf '{"status":"cancelled","timestamp":"%s"}\n' "$(date -Iseconds)" > generate_result.json; \
+          fi; \
+          exit 1 \
+        ' SIGTERM SIGINT
         
         # 获取处理参数
         NEED_IMAGES="${{ github.event.inputs.need_images || 'true' }}"
@@ -657,7 +676,7 @@ jobs:
         fi
         
     - name: 处理失败 - 更新工作流为重试模式并推送
-      if: always() && (steps.check-result.outputs.status == 'error' || steps.check-result.outputs.status == 'circuit_breaker' || (steps.check-result.outputs.status == 'unknown' && steps.generate-task.outcome == 'failure'))
+      if: always() && (steps.check-result.outputs.status == 'error' || steps.check-result.outputs.status == 'circuit_breaker' || steps.check-result.outputs.status == 'timeout' || (steps.check-result.outputs.status == 'unknown' && steps.generate-task.outcome == 'failure')) && steps.check-result.outputs.status != 'cancelled'
       run: |
         echo "⚠️ 文章生成任务执行失败！"
         echo "🔄 调整工作流为重试模式（30分钟后重试）..."
@@ -751,8 +770,60 @@ jobs:
     - name: 发送取消通知
       if: cancelled()
       run: |
-        echo "⏰ 工作流被手动取消！"
-        echo "运行编号: ${{ github.run_number }}"
-        echo "取消时间: $(date)"
-        echo "⚠️ 手动取消不会触发重试"
+        if [ -f ".timeout_inferred" ]; then
+          echo "⏰ 工作流因接近超时而被取消（推测）！"
+          echo "运行编号: ${{ github.run_number }}"
+          echo "时间: $(date)"
+          echo "🕐 将按照重试策略处理"
+        else
+          echo "⏰ 工作流被手动取消！"
+          echo "运行编号: ${{ github.run_number }}"
+          echo "取消时间: $(date)"
+          echo "⚠️ 手动取消不会触发重试"
+        fi
+
+    - name: 处理超时取消 - 设置重试模式
+      if: cancelled()
+      run: |
+        if [ -f ".timeout_inferred" ]; then
+          echo "🔄 检测到超时取消（推测），更新工作流为重试模式（30分钟后重试）..."
+
+          # 配置Git用户信息
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+
+          # 先拉取远程更改，避免推送冲突
+          echo "🔄 拉取远程更改..."
+          git pull origin main --no-edit || {
+            echo "⚠️ 拉取失败，尝试强制拉取..."
+            git fetch origin main
+            git reset --hard origin/main
+          }
+
+          # 运行脚本更新工作流文件
+          echo "🔧 更新工作流文件为重试模式..."
+          python update_workflow_schedule.py --type retry --delay 30 --workflow generate-articles --no-push
+
+          # 添加并提交工作流文件
+          git add .github/workflows/generate-articles.yml
+          if git diff --staged --quiet; then
+            echo "📝 工作流文件未更改，可能已经是最新状态"
+          else
+            git commit -m "因超时取消推测，自动调整工作流为重试模式 (30分钟后重试)"
+            echo "📤 推送工作流文件到仓库..."
+            for i in {1..3}; do
+              if git push https://${{ secrets.USERNAME }}:${{ secrets.GH_PAT }}@github.com/${{ github.repository }}.git HEAD:main; then
+                echo "✅ 工作流文件已成功推送"
+                break
+              else
+                echo "⚠️ 推送失败，尝试第 $i 次重试..."
+                sleep 5
+                git pull origin main --no-edit || git reset --hard origin/main
+              fi
+            done
+          fi
+          echo "✅ 已为超时取消设置重试模式"
+        else
+          echo "🛑 检测到手动取消，不设置重试模式"
+        fi
 

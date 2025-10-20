@@ -1142,6 +1142,16 @@ class ArticleGenerator:
     def _generate_primary_language_image_link(self, img_info, repo_name, article_name, current_date):
         """为主语言版本生成图床的远程URL"""
         try:
+            from urllib.parse import urlsplit, urlunsplit, quote
+
+            def _sanitize_url(url: str) -> str:
+                try:
+                    parts = urlsplit(url)
+                    safe_path = quote(parts.path, safe="/@:_-.~%")
+                    return urlunsplit((parts.scheme, parts.netloc, safe_path, parts.query, parts.fragment))
+                except Exception:
+                    return url
+
             # 获取仓库配置
             if repo_name:
                 enabled_repos = self.repo_manager.get_enabled_repositories()
@@ -1191,7 +1201,8 @@ class ArticleGenerator:
                         branch = image_repo_config.get('branch', 'main')
                         remote_url = f"https://raw.githubusercontent.com/{owner}/{repo_name}/{branch}/{target_path}/{filename}"
                     
-                    return f'![{img_info["type"]}]({remote_url})'
+                    safe_url = _sanitize_url(remote_url)
+                    return f'![{img_info["type"]}]({safe_url})'
             
             # 如果没有配置图床或配置失败，使用相对路径作为后备
             return f'![{img_info["type"]}]({img_info["path"]})'
