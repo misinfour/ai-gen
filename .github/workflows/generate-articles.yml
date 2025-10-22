@@ -30,7 +30,7 @@ on:
 jobs:
   generate-articles:
     runs-on: ubuntu-latest
-    timeout-minutes: 1  # 设置2小时超时
+    timeout-minutes: 120  # 设置2小时超时
     permissions:
       contents: write
       pull-requests: write
@@ -248,7 +248,7 @@ jobs:
     - name: 运行文章生成任务
       id: generate-task
       env:
-        TIMEOUT_MINUTES: 1  # 从 job 的 timeout-minutes 同步，修改时两处都要改
+        TIMEOUT_MINUTES: 120  # 从 job 的 timeout-minutes 同步，修改时两处都要改
       run: |
         # 设置环境变量
         export PYTHONUNBUFFERED=1
