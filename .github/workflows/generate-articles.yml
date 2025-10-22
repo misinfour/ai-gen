@@ -247,6 +247,8 @@ jobs:
         
     - name: 运行文章生成任务
       id: generate-task
+      env:
+        TIMEOUT_MINUTES: 1  # 从 job 的 timeout-minutes 同步，修改时两处都要改
       run: |
         # 设置环境变量
         export PYTHONUNBUFFERED=1
@@ -254,8 +256,11 @@ jobs:
         START_TS=$(date +%s)
         echo "$START_TS" > .job_start_time
         echo "⏱️ 任务开始时间: $START_TS ($(date -d @$START_TS))"
-        TIMEOUT_MINUTES=120
+        echo "⏱️ 配置的超时时间: ${TIMEOUT_MINUTES} 分钟"
+        # 将超时分钟数保存到文件，供后续步骤使用
+        echo "$TIMEOUT_MINUTES" > .timeout_minutes
         # 在接收到终止信号时进行判断：接近超时时认为是超时取消，否则认为是手动取消
+        # 阈值设为超时前5分钟（300秒）
         trap 'NOW=$(date +%s); ELAPSED=$(( NOW - START_TS )); THRESH=$(( TIMEOUT_MINUTES*60 - 300 )); echo "⚠️ 收到终止信号，已运行 ${ELAPSED}s，阈值 ${THRESH}s"; if [ "$ELAPSED" -ge "$THRESH" ]; then echo "⏰ 推测为接近超时导致的取消，标记为需重试"; printf "{\"status\":\"timeout\",\"timestamp\":\"%s\"}\n" "$(date -Iseconds)" > generate_result.json; touch .timeout_inferred; else echo "🛑 推测为手动取消，不重试"; printf "{\"status\":\"cancelled\",\"timestamp\":\"%s\"}\n" "$(date -Iseconds)" > generate_result.json; fi; exit 1' SIGTERM SIGINT
         
         # 获取处理参数
@@ -782,20 +787,28 @@ jobs:
           fi
         fi
         
-        # 方法3: 检查任务运行时长（如果接近120分钟超时，认为是超时）
-        WORKFLOW_START="${{ github.event.repository.updated_at }}"
+        # 方法3: 检查任务运行时长（根据配置的超时时间判断）
         CURRENT_TIME=$(date +%s)
-        # 获取工作流开始时间（从 job 开始计算）
-        if [ -f ".job_start_time" ]; then
+        
+        # 读取配置的超时分钟数和任务开始时间
+        if [ -f ".timeout_minutes" ] && [ -f ".job_start_time" ]; then
+          TIMEOUT_MINUTES=$(cat .timeout_minutes)
           JOB_START=$(cat .job_start_time)
           ELAPSED=$((CURRENT_TIME - JOB_START))
-          TIMEOUT_THRESHOLD=$((120 * 60 - 300))  # 超时前5分钟
-          echo "⏱️ 任务已运行: ${ELAPSED}秒，超时阈值: ${TIMEOUT_THRESHOLD}秒"
+          # 阈值设为超时前5分钟（300秒）
+          TIMEOUT_THRESHOLD=$((TIMEOUT_MINUTES * 60 - 300))
+          
+          echo "⏱️ 配置的超时时间: ${TIMEOUT_MINUTES} 分钟"
+          echo "⏱️ 任务已运行: ${ELAPSED}秒 ($(($ELAPSED / 60))分钟)"
+          echo "⏱️ 超时阈值: ${TIMEOUT_THRESHOLD}秒 ($(($TIMEOUT_THRESHOLD / 60))分钟)"
+          
           if [ "$ELAPSED" -ge "$TIMEOUT_THRESHOLD" ]; then
-            echo "⏰ 根据运行时长判断为超时"
+            echo "⏰ 根据运行时长判断为超时 (${ELAPSED}s >= ${TIMEOUT_THRESHOLD}s)"
             echo "is_timeout=true" >> $GITHUB_OUTPUT
             exit 0
           fi
+        else
+          echo "⚠️ 未找到超时配置或开始时间文件"
         fi
         
         echo "🛑 未检测到超时标记，判断为手动取消"
