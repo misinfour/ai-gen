@@ -250,8 +250,10 @@ jobs:
       run: |
         # 设置环境变量
         export PYTHONUNBUFFERED=1
-        # 记录开始时间与超时阈值，用于区分超时 vs 手动取消
+        # 记录任务开始时间，用于后续超时判断
         START_TS=$(date +%s)
+        echo "$START_TS" > .job_start_time
+        echo "⏱️ 任务开始时间: $START_TS ($(date -d @$START_TS))"
         TIMEOUT_MINUTES=120
         # 在接收到终止信号时进行判断：接近超时时认为是超时取消，否则认为是手动取消
         trap 'NOW=$(date +%s); ELAPSED=$(( NOW - START_TS )); THRESH=$(( TIMEOUT_MINUTES*60 - 300 )); echo "⚠️ 收到终止信号，已运行 ${ELAPSED}s，阈值 ${THRESH}s"; if [ "$ELAPSED" -ge "$THRESH" ]; then echo "⏰ 推测为接近超时导致的取消，标记为需重试"; printf "{\"status\":\"timeout\",\"timestamp\":\"%s\"}\n" "$(date -Iseconds)" > generate_result.json; touch .timeout_inferred; else echo "🛑 推测为手动取消，不重试"; printf "{\"status\":\"cancelled\",\"timestamp\":\"%s\"}\n" "$(date -Iseconds)" > generate_result.json; fi; exit 1' SIGTERM SIGINT
@@ -430,7 +432,12 @@ jobs:
       id: check-result
       if: always()
       run: |
-        if [ -f "generate_result.json" ]; then
+        # 首先检查是否有超时标记文件
+        if [ -f ".timeout_inferred" ]; then
+          echo "⏰ 检测到超时标记文件"
+          echo "status=timeout" >> $GITHUB_OUTPUT
+          echo "error_message=任务因接近超时而被取消" >> $GITHUB_OUTPUT
+        elif [ -f "generate_result.json" ]; then
           STATUS=$(python -c "import json; data=json.load(open('generate_result.json')); print(data['status'])")
           echo "处理状态: $STATUS"
           echo "status=$STATUS" >> $GITHUB_OUTPUT
@@ -443,6 +450,12 @@ jobs:
             CIRCUIT_MSG=$(python -c "import json; data=json.load(open('generate_result.json')); print(data.get('message', 'Circuit breaker triggered'))")
             echo "熔断信息: $CIRCUIT_MSG"
             echo "error_message=$CIRCUIT_MSG" >> $GITHUB_OUTPUT
+          elif [ "$STATUS" = "timeout" ]; then
+            echo "超时信息: 任务接近超时被取消"
+            echo "error_message=任务接近超时被取消" >> $GITHUB_OUTPUT
+          elif [ "$STATUS" = "cancelled" ]; then
+            echo "取消信息: 任务被手动取消"
+            echo "error_message=任务被手动取消" >> $GITHUB_OUTPUT
           fi
         else
           echo "未找到处理结果文件"
@@ -749,13 +762,44 @@ jobs:
       id: detect-cancel-type
       if: always()
       run: |
+        echo "🔍 检测取消类型..."
+        
+        # 方法1: 检查超时标记文件
         if [ -f ".timeout_inferred" ]; then
           echo "⏰ 检测到超时取消标记文件"
           echo "is_timeout=true" >> $GITHUB_OUTPUT
-        else
-          echo "🛑 未检测到超时标记"
-          echo "is_timeout=false" >> $GITHUB_OUTPUT
+          exit 0
         fi
+        
+        # 方法2: 检查 generate_result.json 的状态
+        if [ -f "generate_result.json" ]; then
+          STATUS=$(python3 -c "import json; data=json.load(open('generate_result.json')); print(data.get('status', 'unknown'))" 2>/dev/null || echo "unknown")
+          echo "� generate_result.json 状态: $STATUS"
+          if [ "$STATUS" = "timeout" ]; then
+            echo "⏰ 从结果文件检测到超时状态"
+            echo "is_timeout=true" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+        fi
+        
+        # 方法3: 检查任务运行时长（如果接近120分钟超时，认为是超时）
+        WORKFLOW_START="${{ github.event.repository.updated_at }}"
+        CURRENT_TIME=$(date +%s)
+        # 获取工作流开始时间（从 job 开始计算）
+        if [ -f ".job_start_time" ]; then
+          JOB_START=$(cat .job_start_time)
+          ELAPSED=$((CURRENT_TIME - JOB_START))
+          TIMEOUT_THRESHOLD=$((120 * 60 - 300))  # 超时前5分钟
+          echo "⏱️ 任务已运行: ${ELAPSED}秒，超时阈值: ${TIMEOUT_THRESHOLD}秒"
+          if [ "$ELAPSED" -ge "$TIMEOUT_THRESHOLD" ]; then
+            echo "⏰ 根据运行时长判断为超时"
+            echo "is_timeout=true" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+        fi
+        
+        echo "🛑 未检测到超时标记，判断为手动取消"
+        echo "is_timeout=false" >> $GITHUB_OUTPUT
 
     - name: 发送超时取消通知
       if: cancelled() && steps.detect-cancel-type.outputs.is_timeout == 'true'
